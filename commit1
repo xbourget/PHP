@@ -1,0 +1,4 @@
+<?php
+    //$name = 'toto';
+    print( "<h1>Hello commit1 $name </h1>");
+?>
