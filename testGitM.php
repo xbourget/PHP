@@ -1,4 +1,4 @@
 <?php
     
-    print( "<h1>Hello Git</h1>");
+    print( "<h1>Hello $name </h1>");
 ?>
