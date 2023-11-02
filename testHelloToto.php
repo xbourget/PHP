@@ -1,4 +1,4 @@
 <?php
-    $name = 'toto';
-    print( "<h1>Hello $name </h1>");
+    $name = 'tout le monde';
+    print("<h1>Salut $name </h1>!");
 ?>
