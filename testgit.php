@@ -1,4 +1,3 @@
 <?php
-    //$name = 'toto';
-    print( "<h1>Hello git $name </h1>");
+    print( "<h1>Hello GIT </h1>");
 ?>
