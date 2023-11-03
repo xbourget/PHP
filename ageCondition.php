@@ -1,9 +1,16 @@
 <?php
 
-$age = 41;
+$age = 65;
+$money = 50000;
 
-switch ($age) {
-    case $age >= 64:
+if ($money >= 100000) {
+    $riche = true;
+} else {
+    $riche = false;
+}
+
+switch (true) {
+    case $age >= 64 and $riche:
         print("Retraite");
         break;
     case $age >= 20:
@@ -24,9 +31,8 @@ switch ($age) {
     case $age >= 3:
         print("Maternelle");
         break;
-    case $age >= 0:
+    default:
         print("GOUGOUGAGA LE BÉBÉ!");
-        break;
     }  
 
 ?>
