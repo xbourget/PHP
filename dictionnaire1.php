@@ -3,7 +3,9 @@
     [
         'age'   => 17,
         'poids' => 76,
-        'ville' => 'Rouen'
+        'ville' => 'Rouen',
+        'loisir' => 'tricot',
+        'sport' => 'natation'
     ];
     
     $totoL = 
