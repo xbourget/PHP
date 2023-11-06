@@ -1,34 +1,14 @@
 <?php
+    $age    = 15;
+    $permis = true;
 
-    $temperature = 15;
-    
+    if ( $age < 18 )
+        $permis = false;
 
-    if ( $temperature < -10  )
-    
-        print ("tres tres foid");
-        
-        elseif ( $temperature < 15 )
-        print (" il fait bon" );
-    
-
-        elseif ( $temperature < 30)
-        print ("bon");
-    
-        else
-        print ( "trop chaud" );
-
-
-$age = 15;
-$nom = 'toto';
-
-if ( $age >= 18 || $nom == 'toto' ) 
-{
-    print( "tu peux te sauver en voiture<br>" );
-    print( "bye bye $nom");
-}
-elseif ( $age < 5 )
-    print( "tu es à la maternelle");
-else
-    print( "tu prends le bus" );
-
+    if ( $age >= 18 && $permis ) 
+        print( "tu peux conduire une voiture" );
+    elseif ( $age < 5 )
+        print( "tu es à la maternelle");
+    else
+        print( "tu prends le bus" );
 ?>
