@@ -23,4 +23,23 @@
         print( $var );
 
     }
+    
+    function myTable( $width, $height, $dis='*' )
+    {
+        print( "<table>\n");
+        for( $i=0 ; $i<$height ; $i++ )
+        {
+            print( "<tr>\n");
+            for( $j=0 ; $j<$width ; $j++ )
+            {
+                print( "<td>\n");
+                print( "$dis" );
+                print( "</td>\n");
+            }
+            print( "</tr>\n");
+        }
+        print( "</table>\n");
+    }
+
+
 ?>
