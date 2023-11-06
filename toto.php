@@ -1,3 +1,3 @@
 <?php
-    print( "<h1>Hello GIT </h1>");
+    print( "<h1>Hello  </h1>");
 ?>

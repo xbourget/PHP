@@ -11,6 +11,7 @@ if ( $age >= 18 || $nom == 'toto' )
 elseif ( $age < 5 )
     print( "tu es à la maternelle");
 else
-    print( "tu prends le bus" );
+    print( "tu prends le bus" ); 
+
 
 ?>
