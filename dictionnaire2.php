@@ -26,7 +26,7 @@
                 'permis' => true
             ]
     ];
-    
+    musiq
     foreach ( $promo as $eleve => $data ) 
     {
         print( "elève : $eleve :<br>");
