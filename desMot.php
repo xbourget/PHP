@@ -19,7 +19,8 @@ function compteMotInListe( $motATrouver, $liste )
         if ($mot == $motATrouver ) 
             $cpt++;
     return $cpt;
-}
+}$url = "https://rouenmetropole.opendatasoft.com/api/explore/v2.1/catalog/datasets/eco-counter-sites/records?limit=20";
+
 
 
 

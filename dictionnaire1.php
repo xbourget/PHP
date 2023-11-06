@@ -18,6 +18,9 @@
 
 
 
+    
+
+
     foreach ( $totoD as $key => $value) 
         print ( "$key => $value<br>");
     foreach ( $totoL     as $key => $value) 
