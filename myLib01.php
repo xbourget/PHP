@@ -1,27 +1,33 @@
 <?php
 
-    function myHeader( $titre="ma page" )
+    function myTable( $width, $height, $carac='()' )
     {
-        $var = "<!DOCTYPE html>
-        <html lang=\"en\">
-        <head>
-            <meta charset=\"UTF-8\">
-            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-            <title>$titre</title>
-        </head>
-        <body>
-        ";
-        print( $var );
+        print( "<table>\n");
+        for( $i=0 ; $i<$height ; $i++ )
+        {
+            print( "<tr>\n");
+            for( $j=0 ; $j<$width ; $j++ )
+            {
+                print( "<td>");
+                print( $carac );
+                print( "</td>\n");
+            }
+            print( "</tr>\n");
+        }
+        print( "</table>\n");
     }
 
-    function myFooter()
+    function myTableList( $data )
     {
-        $var = "
-        </body>
-        </html>
-        ";
-        print( $var );
-
+        print( '<table>' );
+        for( $i = 0 ; $i < count( $data ) ; $i++ )
+        {
+            print( '<tr>' );
+            for( $j = 0 ; $j < count( $data[$i] ) ; $j++ )
+                print( '<td>'.$data[ $i ][ $j ].'</td>' );
+            print( '</tr>' );
+        }
+        print( '</table>' );
     }
 
 ?>
