@@ -7,10 +7,11 @@
                 'age'   => 17,
                 'poids' => 76,
                 'ville' => 'Rouen',
-                'permis' => 0
+                'permis' => 0,
+                'musique' => 'jazz'
             ],
 
-            'momo' => 
+        'momo' => 
             [
                 'age'   => 30,
                 'poids' => 88,
@@ -18,7 +19,7 @@
                 'permis' => true
             ],
 
-            'pipo' => 
+        'pipo' => 
             [
                 'age'   => 22,
                 'poids' => 91,
@@ -26,6 +27,32 @@
                 'permis' => true
             ]
     ];
+
+    $promo['riri'] = [
+        'age'   => 16,
+        'poids' => 30,
+        'ville' => 'Donaldville',
+        'permis' => true,
+        'musique' => 'coin coin'
+    ];
+
+    $promo['fifi'] = [
+        'age'   => 16,
+        'poids' => 31,
+        'ville' => 'Donaldville',
+        'permis' => false,
+        'musique' => 'pouet pouet'
+    ];
+
+    $promo['loulou'] = [
+        'age'   => 16,
+        'poids' => 29,
+        'ville' => 'Donaldville',
+        'permis' => false,
+        'musique' => 'tut tut'
+    ];
+
+    unset($promo['pipo']);
     
     foreach ( $promo as $eleve => $data ) 
     {
