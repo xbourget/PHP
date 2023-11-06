@@ -1,4 +1,6 @@
+
 <?php
+
 
     $prenoms = [ 'eudes', 'sigismond', 'gontran', 'gertrude' ];
 
@@ -7,8 +9,9 @@
     {
         $prenom = ucfirst( $prenom );
         print( "bonjour $prenom<br>" );
-        if ( $prenom == 'Gontran' )
+        if ( $prenom === 'Gontran' )
             print( "bonne fête $prenom<br>" );
     }
+
 
 ?>
