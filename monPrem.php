@@ -1,33 +1,16 @@
 <?php
-$monNom="toto";
-$age=13;
 
+$monPreNom = 'sigismond';
+$monNom = 'toto';
 
+$nom = $monPreNom.' '.$monNom;
 
-print("nom : $monNom age : $age ") ;
-for ($i = 1; $i <= 10; $i++) {
-    echo $i .  "<br> ";
-}
-echo "<br>";
+$age = 13;
 
-for ($i = 0; $i <= 5; $i++) {
-    for ($j = 0; $j <= $i; $j++) {
-        echo "* ";
-    }
-    echo "<br>";
-}
-$a=0;
-while(1)
-{
-    echo $a  ;
-    $a++;
-    if ( $a < 5 )
-        continue;
-    print( "après continue<br>");
-    if ( $a == 10 )
-        break;
-}
+print( "nom: $monNom -> age: $age" );
+print( '<br>' );
 
-
+$age = $age + 2;
+print( "nom: $nom -> age: $age" );
 
 ?>
