@@ -1,38 +1,55 @@
 <?php
-    $promo =
-   [
-    'toto' => 
-        [
-            'age'   => 17,
-            'poids' => 76,
-            'ville' => 'Rouen',
-            'permis' => 0
-        ],
 
-        'momo' => 
-        [
-            'age'   => 30,
-            'poids' => 88,
-            'ville' => 'Rouen',
-            'musique' => 'flute',
-            'permis' => true
-        ],
+$familledafonte =
+    [
+        'maman' => 
+            [
+                'age'   => 43,
+                'poids' => 72,
+                'ville' => 'perriers sur andelle',
+                'permis' => true
+            ],
 
-        'pipo' => 
-        [
-            'age'   => 22,
-            'poids' => 91,
-            'ville' => 'Havre',
-            'permis' => true
-        ]
-];
+        'rui' => 
+            [
+                'age'   => 11,
+                'poids' => 36,
+                'ville' => 'perriers sur andelle',
+                'permis' => false,
+                'sport' => 'foot'
+            ],
 
-foreach ( $promo as $eleve => $data ) 
-{
-    print( "elève : $eleve :<br>");
-    foreach ( $data as $key => $value) 
-        print ( "----- $key => $value<br>");
-    print( "-------------------<br>");
-}
+        'leonardo' => 
+            [
+                'age'   => 9,
+                'poids' => 30,
+                'ville' => 'perriers sur andelle',
+                'permis' => false,
+                'loisirs' => ['dessin', 'basket' ]
+            ]
+    ];
+    
+    unset( $familledafonte[ 'maman' ][ 'poids' ] );
 
+
+    foreach ( $familledafonte as $personne => $data ) 
+    {
+        print( "personne : $personne :<br>");
+        foreach ( $data as $key => $value) 
+        {
+            if ( gettype( $value ) == 'array'  )
+            {
+                print ( "----- $key => ");
+                print_r( $value );
+                print ( "<br>");
+            }
+
+            else
+                print ( "----- $key => $value<br>");
+        }
+        print( "-------------------<br>");
+    }
+
+    print( $familledafonte[ 'rui' ][ 'sport']  );
 ?>
+  
