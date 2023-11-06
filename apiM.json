@@ -1,0 +1,685 @@
+{
+    "total_count": 2426,
+    "results": [
+        {
+            "geo_point_2d": {
+                "lon": 1.0311754521962886,
+                "lat": 49.3118705062772
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.031175452196289,
+                        49.3118705062772
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2915,
+            "nom_arret": "Pierre et Marie Curie",
+            "x": 1556865.3672,
+            "y": 8236537.3461,
+            "insee": 76178.0,
+            "commune": "CL\u00c9ON",
+            "type_ligne": "R\u00e9guli\u00e8re",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": "OUI",
+            "tad": null,
+            "scolaire": "OUI",
+            "noctambus": null,
+            "lignes_des": "106 - E",
+            "direction": "Mairie de Cl\u00e9on - CL\u00c9ON",
+            "type_d_arr": "Auvent"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 1.036883009623073,
+                "lat": 49.30837480459879
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.036883009623073,
+                        49.30837480459879
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2927,
+            "nom_arret": "Les Peintres",
+            "x": 1557270.1655,
+            "y": 8236137.9809,
+            "insee": 76178.0,
+            "commune": "CL\u00c9ON",
+            "type_ligne": "R\u00e9guli\u00e8re",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": "OUI",
+            "tad": null,
+            "scolaire": null,
+            "noctambus": null,
+            "lignes_des": "D2 - F",
+            "direction": "P\u00f4le Multimodal d'Oissel - OISSEL",
+            "type_d_arr": "Abri"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 1.044274899880788,
+                "lat": 49.31006349033094
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.044274899880788,
+                        49.31006349033094
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2930,
+            "nom_arret": "Renault",
+            "x": 1557812.3165,
+            "y": 8236311.8422,
+            "insee": 76178.0,
+            "commune": "CL\u00c9ON",
+            "type_ligne": "R\u00e9guli\u00e8re",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": "OUI",
+            "tad": null,
+            "scolaire": null,
+            "noctambus": null,
+            "lignes_des": "D2 - F",
+            "direction": "Mairie de Saint-Pierre-L\u00e8s-Elbeuf - SAINT-PIERRE-L\u00c8S-ELBEUF",
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 1.0365266471098145,
+                "lat": 49.30852849843194
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.036526647109814,
+                        49.30852849843194
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2928,
+            "nom_arret": "Les Peintres",
+            "x": 1557244.7037,
+            "y": 8236155.7372,
+            "insee": 76178.0,
+            "commune": "CL\u00c9ON",
+            "type_ligne": "R\u00e9guli\u00e8re",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": "OUI",
+            "tad": null,
+            "scolaire": null,
+            "noctambus": null,
+            "lignes_des": "D2 - F",
+            "direction": "Mairie de Saint-Pierre-L\u00e8s-Elbeuf - SAINT-PIERRE-L\u00c8S-ELBEUF",
+            "type_d_arr": "Abri"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 0.9619383119425859,
+                "lat": 49.30540635743627
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        0.961938311942586,
+                        49.30540635743627
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2850,
+            "nom_arret": "Ecole de La Londe",
+            "x": 1551813.681,
+            "y": 8235951.5792,
+            "insee": 76391.0,
+            "commune": "LA LONDE",
+            "type_ligne": "R\u00e9guli\u00e8re",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": "OUI",
+            "tad": null,
+            "scolaire": null,
+            "noctambus": null,
+            "lignes_des": "B",
+            "direction": "Ecole de La Londe - LA LONDE",
+            "type_d_arr": "Poteau - Abri"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 0.9524604889709041,
+                "lat": 49.30690528101736
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        0.952460488970904,
+                        49.30690528101736
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2852,
+            "nom_arret": "Mairie de La Londe",
+            "x": 1551129.2159,
+            "y": 8236136.7541,
+            "insee": 76391.0,
+            "commune": "LA LONDE",
+            "type_ligne": "R\u00e9guli\u00e8re",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": "OUI",
+            "tad": null,
+            "scolaire": null,
+            "noctambus": null,
+            "lignes_des": "B",
+            "direction": "Ecole de La Londe - LA LONDE",
+            "type_d_arr": "Abri"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 1.0585128282610787,
+                "lat": 49.392322318676996
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.058512828261079,
+                        49.392322318676996
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 20121,
+            "nom_arret": "Z\u00e9nith - Parc Expo",
+            "x": 1559081.1612,
+            "y": 8245430.2117,
+            "insee": 76575.0,
+            "commune": "SAINT-\u00c9TIENNE-DU-ROUVRAY",
+            "type_ligne": "TEOR",
+            "tramway": null,
+            "teor": "OUI",
+            "fast": "OUI",
+            "reguliere": null,
+            "tad": null,
+            "scolaire": null,
+            "noctambus": "OUI",
+            "lignes_des": "Noctambus - F6 - F9 - T4",
+            "direction": "C.H.U. Charles Nicolle - ROUEN",
+            "type_d_arr": "Abri"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 1.0626122795566717,
+                "lat": 49.398219398689896
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.062612279556672,
+                        49.398219398689896
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 20119,
+            "nom_arret": "George Sand",
+            "x": 1559395.3816,
+            "y": 8246078.2138,
+            "insee": 76575.0,
+            "commune": "SAINT-\u00c9TIENNE-DU-ROUVRAY",
+            "type_ligne": "TEOR",
+            "tramway": null,
+            "teor": "OUI",
+            "fast": null,
+            "reguliere": null,
+            "tad": null,
+            "scolaire": null,
+            "noctambus": "OUI",
+            "lignes_des": "Noctambus - T4",
+            "direction": "C.H.U. Charles Nicolle - ROUEN",
+            "type_d_arr": "Abri"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 1.0652529625404825,
+                "lat": 49.40226456104168
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.065252962540483,
+                        49.40226456104168
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 20116,
+            "nom_arret": "Stendhal",
+            "x": 1559598.4497,
+            "y": 8246523.0454,
+            "insee": 76322.0,
+            "commune": "LE GRAND-QUEVILLY",
+            "type_ligne": "TEOR",
+            "tramway": null,
+            "teor": "OUI",
+            "fast": null,
+            "reguliere": null,
+            "tad": null,
+            "scolaire": null,
+            "noctambus": "OUI",
+            "lignes_des": "Noctambus - T4",
+            "direction": "Z\u00e9nith - Parc Expo - LE GRAND-QUEVILLY",
+            "type_d_arr": "Abri"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 0.9799466676638131,
+                "lat": 49.29112681703891
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        0.979946667663813,
+                        49.29112681703891
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 3267,
+            "nom_arret": "Pavillon",
+            "x": 1553080.4977,
+            "y": 8234329.1525,
+            "insee": 76231.0,
+            "commune": "ELBEUF",
+            "type_ligne": "R\u00e9guli\u00e8re",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": "OUI",
+            "tad": null,
+            "scolaire": null,
+            "noctambus": null,
+            "lignes_des": "B",
+            "direction": "Ecole de La Londe - LA LONDE",
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 0.9214669395087747,
+                "lat": 49.41009706284879
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        0.921466939508775,
+                        49.41009706284879
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 3236,
+            "nom_arret": "La Ferme de Beaulieu",
+            "x": 1549190.4876,
+            "y": 8247669.5819,
+            "insee": 76056.0,
+            "commune": "BARDOUVILLE",
+            "type_ligne": "TAD",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": null,
+            "tad": "OUI",
+            "scolaire": "OUI",
+            "noctambus": null,
+            "lignes_des": "FILOR - 208",
+            "direction": null,
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 1.180641588089485,
+                "lat": 49.46966682965117
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.180641588089485,
+                        49.46966682965117
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 3292,
+            "nom_arret": "Vieux Ch\u00e2teau",
+            "x": 1568149.994,
+            "y": 8253809.7828,
+            "insee": 76536.0,
+            "commune": "RONCHEROLLES-SUR-LE-VIVIER",
+            "type_ligne": "TAD",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": null,
+            "tad": "OUI",
+            "scolaire": "OUI",
+            "noctambus": null,
+            "lignes_des": "FILOR - 301 - 342",
+            "direction": "Bois Breton - RONCHEROLLES-SUR-LE-VIVIER",
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 0.8831118086289048,
+                "lat": 49.48726749776072
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        0.883111808628905,
+                        49.48726749776072
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 3302,
+            "nom_arret": "Coll\u00e8ge Flaubert",
+            "x": 1546647.6022,
+            "y": 8256325.4449,
+            "insee": 76222.0,
+            "commune": "DUCLAIR",
+            "type_ligne": "Scolaire",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": null,
+            "tad": null,
+            "scolaire": "OUI",
+            "noctambus": null,
+            "lignes_des": "208",
+            "direction": null,
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 0.8819504753027481,
+                "lat": 49.48717261020445
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        0.881950475302748,
+                        49.48717261020445
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 3304,
+            "nom_arret": "Coll\u00e8ge Flaubert",
+            "x": 1546563.1999,
+            "y": 8256317.2428,
+            "insee": 76222.0,
+            "commune": "DUCLAIR",
+            "type_ligne": "Scolaire",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": null,
+            "tad": null,
+            "scolaire": "OUI",
+            "noctambus": null,
+            "lignes_des": "202",
+            "direction": null,
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 0.8208966779244944,
+                "lat": 49.50666355008
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        0.820896677924494,
+                        49.50666355008
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2367,
+            "nom_arret": "La Chapelle",
+            "x": 1542203.7209,
+            "y": 8258609.1925,
+            "insee": 76608.0,
+            "commune": "SAINTE-MARGUERITE-SUR-DUCLAIR",
+            "type_ligne": "TAD",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": null,
+            "tad": "OUI",
+            "scolaire": "OUI",
+            "noctambus": null,
+            "lignes_des": "FILOR - 210",
+            "direction": null,
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 0.8337684106190124,
+                "lat": 49.49967771070973
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        0.833768410619012,
+                        49.49967771070973
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2373,
+            "nom_arret": "La Poissonnerie",
+            "x": 1543113.3867,
+            "y": 8257805.9081,
+            "insee": 76608.0,
+            "commune": "SAINTE-MARGUERITE-SUR-DUCLAIR",
+            "type_ligne": "TAD",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": null,
+            "tad": "OUI",
+            "scolaire": "OUI",
+            "noctambus": null,
+            "lignes_des": "FILOR - 220",
+            "direction": null,
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 1.0511232770260641,
+                "lat": 49.302350329283016
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.051123277026064,
+                        49.302350329283016
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2869,
+            "nom_arret": "Hameau Fr\u00e9ret",
+            "x": 1558288.0888,
+            "y": 8235441.5573,
+            "insee": 76282.0,
+            "commune": "FRENEUSE",
+            "type_ligne": "TAD",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": null,
+            "tad": "OUI",
+            "scolaire": "OUI",
+            "noctambus": null,
+            "lignes_des": "Allobus 2 - 100 - 104",
+            "direction": "P\u00f4le Multimodal Cotoni - OISSEL",
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 0.9925313416212728,
+                "lat": 49.30134006283063
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        0.992531341621273,
+                        49.30134006283063
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2699,
+            "nom_arret": "Abattoirs",
+            "x": 1554025.6041,
+            "y": 8235440.265,
+            "insee": 76231.0,
+            "commune": "ELBEUF",
+            "type_ligne": "R\u00e9guli\u00e8re",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": "OUI",
+            "tad": "OUI",
+            "scolaire": "OUI",
+            "noctambus": null,
+            "lignes_des": "Allobus 1 - 101 - G",
+            "direction": "Route du Bac - LA BOUILLE",
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 1.0463908309604486,
+                "lat": 49.320402042396175
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.046390830960449,
+                        49.320402042396175
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 2919,
+            "nom_arret": "R.N.U.R.",
+            "x": 1557995.7016,
+            "y": 8237457.2303,
+            "insee": 76178.0,
+            "commune": "CL\u00c9ON",
+            "type_ligne": "TAD",
+            "tramway": null,
+            "teor": null,
+            "fast": null,
+            "reguliere": null,
+            "tad": "OUI",
+            "scolaire": "OUI",
+            "noctambus": null,
+            "lignes_des": "Allobus 2 - 102 - 106 - 311",
+            "direction": "Champ de Foire - ELBEUF",
+            "type_d_arr": "Poteau"
+        },
+        {
+            "geo_point_2d": {
+                "lon": 1.0713198190399897,
+                "lat": 49.428543525080116
+            },
+            "geo_shape": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        1.07131981903999,
+                        49.428543525080116
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "id": 20106,
+            "nom_arret": "Louis Poterat",
+            "x": 1560112.8574,
+            "y": 8249433.414,
+            "insee": 76540.0,
+            "commune": "ROUEN",
+            "type_ligne": "TEOR",
+            "tramway": null,
+            "teor": "OUI",
+            "fast": null,
+            "reguliere": null,
+            "tad": null,
+            "scolaire": null,
+            "noctambus": null,
+            "lignes_des": "T4",
+            "direction": "C.H.U. Charles Nicolle - ROUEN",
+            "type_d_arr": "Abri"
+        }
+    ]
+}
