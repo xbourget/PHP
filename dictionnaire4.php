@@ -4,6 +4,8 @@
                 'ville' => 'Rouen'   ];
     
     $toto[ 'loisir'] = 'vélo';
+    $toto[ 'age'] = 27;
+    
     print_r( $toto );
     $json = json_encode( $toto );
     print( '<br>'.$json.'<br>' );
