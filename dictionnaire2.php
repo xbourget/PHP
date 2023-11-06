@@ -7,7 +7,8 @@
                 'age'   => 17,
                 'poids' => 76,
                 'ville' => 'Rouen',
-                'permis' => 0
+                'permis' => 0,
+                'loisir'=> 'danse classique'
             ],
 
             'momo' => 
@@ -24,6 +25,14 @@
                 'poids' => 91,
                 'ville' => 'Havre',
                 'permis' => true
+            ],
+        
+            'pathe' => 
+            [
+                'age'   => 31,
+                'poids' => 80,
+                'ville' => 'Rouen',
+                'permis' => 0
             ]
     ];
     
