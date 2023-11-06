@@ -1,4 +1,0 @@
-<?php
-    $name = 'robinou';
-    print( "<h1>Hello $name </h1>");
-?>
