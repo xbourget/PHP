@@ -1,16 +1,14 @@
 <?php
+    $age    = 15;
+    $permis = true;
 
-$age = 25;
+    if ( $age < 18 )
+        $permis = false;
 
-
-if ($age >= 18 or $nom == 'toto' )
-
- {  print( "tu peux te sauver en voiture" );
-    print( "bye bye $nom" );
-    
-}
-elseif ( $age < 5 )
-    print( "tu es à la maternelle");
-else
-  print( "tu prends le bus");
+    if ( $age >= 18 && $permis ) 
+        print( "tu peux conduire une voiture" );
+    elseif ( $age < 5 )
+        print( "tu es à la maternelle");
+    else
+        print( "tu prends le bus" );
 ?>
