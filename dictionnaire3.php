@@ -1,12 +1,16 @@
 <?php
-    $toto = [   'age'   => 17,
+    $toto = [   'age'   => 17,           
                 'poids' => 76,
-                'ville' => 'Rouen'   ];
+                'ville' => 'Rouen',
+                'plat'  => 'canard au sang'
+               ];
     
-    $key    = array_keys( $toto );
+    $keys   = array_keys( $toto );
     $values = array_values( $toto );
-    $dict2  = array_combine( $key, $values );
-    print_r( $dict2 );
+    $dict2  = array_combine( $keys, $values );
+    var_dump( $dict2 );
+    
+    print( '<br>plat préféré : '.$toto[ 'plat'].'<br>'  );
 ?>
 
 

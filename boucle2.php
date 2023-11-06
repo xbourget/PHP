@@ -6,7 +6,7 @@
     // 3   $a++           la fin de boucle où se produit 
     //                    le plus souvent l'incrémentation
 
-    for( $a=0 ; $a < 5 ; $a++, print( '<br>') )
+    for( $a = 0 ; $a < 5 ; $a++, print( '<br>') )
         print( $a );
     
     // si plusieurs opérations doivent avoir lieu 
