@@ -1,24 +1,25 @@
 <?php
-   //calculer la moyenne de la longeur des mots de la liste
+   
     
-$liste = [ 'jean', 'dupont',  'sergent' , 'garcia', 'A',  'xavier', 'dupond', 'unMotQuiEstLong' ];
+    $liste = [ 'jean', 'dupont',  'sergent' , 'garcia', 'A',  'xavier', 'dupond', 'unMotQuiEstLong' ];
 
-function moyenneMot ($liste)
-{
-$totallgrmot=0;
-    for ($i=0; $i<count ($liste); $i++)
+
+    function moyenneMot( $liste )
     {
-    $mot=$liste[$i];
-    $lenmot=strlen ($mot);
-    $totallgrmot=$totallgrmot + $lenmot;
-   // $totallgrmot=+ $lenmot
-    print ("$mot $lenmot<br>"); //affiche la longeur de chaque mot
+        $totalLongueurMot = 0;
+        for ($i=0; $i < count( $liste); $i++) 
+        { 
+            $mot    = $liste[ $i ];
+            $lenMot = strlen( $mot );
+            //$totalLongueurMot = $totalLongueurMot + $lenMot;
+            $totalLongueurMot +=  $lenMot;
+            //print( " $mot -> $lenMot<br>");
+        }
+        $moyenne = $totalLongueurMot / count( $liste );
+        print( " moyenne $moyenne<br>");
     }
 
-$moyenne =$totallgrmot/count($liste);
 
-print ("moyenne $moyenne <br>");
-}
+    moyenneMot( $liste );
 
-moyenneMot ($liste);
 ?>

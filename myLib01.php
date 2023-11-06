@@ -8,6 +8,9 @@
             <meta charset=\"UTF-8\">
             <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
             <title>$titre</title>
+            <style>
+            td: border: 1px solid black;
+            </style>
         </head>
         <body>
         ";
@@ -21,24 +24,38 @@
         </html>
         ";
         print( $var );
+    }
 
-    }
-    function myTable($width, $height,$contenu= '*')
+    function myTable( $width, $height, $carac='()' )
     {
-        
-        print ('<table>');
-        for ($i=0; $i<$height; $i++)
+        print( "<table>\n");
+        for( $i=0 ; $i<$height ; $i++ )
         {
-            print ('<tr>');   //debut de ligne
-            for ($j=0; $j<$width; $j++)
-            {print ('<td>');    //debut dinsertion de contenu dans la lignes du tableau
-            print ($contenu);
-            print ('</td>'); //fin dinsertion de contenu dans la lignes du tableau
+            print( "<tr>\n");
+            for( $j=0 ; $j<$width ; $j++ )
+            {
+                print( "<td>");
+                print( $carac );
+                print( "</td>\n");
             }
-            print ('</tr>'); //fin de ligne
+            print( "</tr>\n");
         }
-       
-        print ('</table>');
+        print( "</table>\n");
     }
+
+    function myTableList( $data )
+    {
+        print( '<table>' );
+        for( $i = 0 ; $i < count( $data ) ; $i++ )
+        {
+            print( '<tr>' );
+            for( $j = 0 ; $j < count( $data[$i] ) ; $j++ )
+                print( '<td>'.$data[ $i ][ $j ].'</td>' );
+            print( '</tr>' );
+        }
+        print( '</table>' );
+    }
+
+
 ?>
 
