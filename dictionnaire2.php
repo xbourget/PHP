@@ -25,8 +25,9 @@
                 'ville' => 'Havre',
                 'permis' => true
             ]
+
     ];
-    
+    $promo['toto']['musique'] = 'Rock'; 
     foreach ( $promo as $eleve => $data ) 
     {
         print( "elève : $eleve :<br>");
