@@ -8,7 +8,7 @@
 
     for( $b=0 ; $b < 10 ; $b += 2 )
     {
-        print( "$b<br>");œ
+        print( "$b<br>");
     }
 
     for( $b=10 ; $b > 0 ; $b = $b - 2 )
