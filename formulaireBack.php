@@ -12,7 +12,7 @@
         $_SESSION[ 'nom'  ] = $nom;
         $_SESSION[ 'prenom'  ] = $prenom;
 
-        header( 'location: http://192.168.1.152/PHP/formulaireSuite.php'   ); 
+        header( 'location: http://192.168.1.60/PHP/formulaireSuite.php'   ); 
     }
     //$_SERVER['REQUEST_URI']
 ?>

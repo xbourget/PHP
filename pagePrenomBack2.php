@@ -1,15 +1,17 @@
 <?php
     session_start();
 
+    require_once 'ipconfig.php';
+
     if( !empty($_POST))
     {
         $nom = $_POST[ 'nom' ];
         if ( $nom != "" )
         {
             $_SESSION[ 'nom'  ] = $nom;
-            header( 'location: http://192.168.1.152/PHP/pagePrenomFront3.php'   );
+            header( "location: $myAddress/PHP/pagePrenomFront3.php"   );
         }
         else
-            header( 'location: http://192.168.1.152/PHP/pagePrenomFront2.html'   );
+            header( "location: $myAddress/PHP/pagePrenomFront2.php"   );
     }
 ?>

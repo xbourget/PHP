@@ -56,6 +56,13 @@
         print( '</table>' );
     }
 
+    function createForm($urlAction, $name) {
+        print("<form action='" . $urlAction . "' method='post'>");
+        print("<input type='text' name='" . $name . "' placeholder='ton " . $name . "' />");
+        print("<input type='submit' name='submit' value='OK' />");
+        print('</form>');
+    }    
+
 
 ?>
 
