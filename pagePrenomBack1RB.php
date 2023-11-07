@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    session_start(); //permet de garder en mémoire les informations demandées à l'utilisateur
 
     if( !empty($_POST))
     {
@@ -7,9 +7,9 @@
         if ( $prenom != "" )
         {
             $_SESSION[ 'prenom'  ] = $prenom;
-            header( 'location: http://192.168.56.1/PHP/pagePrenomFront2.html'   );
+            header( 'location: http://192.168.56.1/PHP/pagePrenomFront2RB.html'   );
         }
         else
-            header( 'location: http://192.168.56.1/PHP/pagePrenomFront1.html'   );
+            header( 'location: http://192.168.56.1/PHP/pagePrenomFront1RB.html'   );
     }
 ?>
