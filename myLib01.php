@@ -42,8 +42,6 @@
         print( "</table>\n");
     }
 
-
-
     function myTableList( $data )
     {
         print( '<table>' );
