@@ -10,8 +10,6 @@
 
     myHeader("info age");
 
-    print( "<h1>hello $prenom $nom</h1>");
-
     createForm($myAddress."/PHP/pagePrenomBack3.php", "age");
     
 ?>
