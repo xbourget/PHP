@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pagePrenomBack2RB.php
 <?php
 include "parametreRB.php"
     session_start();
@@ -14,3 +15,20 @@ include "parametreRB.php"
             header( 'location: http://192.168.1.5/PHP/pagePrenomFront2RB.html'   );
     }
 ?>
+=======
+<?php
+    session_start();
+
+    if( !empty($_POST))
+    {
+        $nom = $_POST[ 'nom' ];
+        if ( $nom != "" )
+        {
+            $_SESSION[ 'nom'  ] = $nom;
+            header( 'location: http://192.168.1.152/PHP/pagePrenomFront3.php'   );
+        }
+        else
+            header( 'location: http://192.168.1.152/PHP/pagePrenomFront2.php'   );
+    }
+?>
+>>>>>>> origin/xavier:pagePrenomBack2.php
