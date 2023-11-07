@@ -43,15 +43,6 @@
     }
 
 
-    function myFooter()
-    {
-        $var = "
-        </body>
-        </html>
-        ";
-        print( $var );
-    }
-
 
     function myTableList( $data )
     {
