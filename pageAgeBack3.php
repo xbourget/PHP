@@ -4,7 +4,7 @@
 
     if( !empty($_POST))
     {
-        $age = $_POST[ 'Age' ];
+        $age = $_POST[ 'age' ];
         if ( $age != "" )
         {
             $_SESSION[ 'age'  ] = $age;
