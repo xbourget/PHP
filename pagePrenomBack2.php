@@ -1,4 +1,5 @@
 <?php
+    include "parametre.php";
     session_start();
 
     if( !empty($_POST))
@@ -7,13 +8,9 @@
         if ( $nom != "" )
         {
             $_SESSION[ 'nom'  ] = $nom;
-            header( 'location: http://192.168.1.141/PHP/pagePrenomFront3.php'   );
+            header( 'location: '$__url.'/PHP/pagePrenomFront3.php'   );
         }
         else
-<<<<<<< HEAD
-            header( 'location: http://192.168.1.141/PHP/pagePrenomFront2.html'   );
-=======
-            header( 'location: http://192.168.1.152/PHP/pagePrenomFront2.php'   );
->>>>>>> origin/xavier
+            header( 'location: '$__urL.'/PHP/pagePrenomFront2.html'   );
     }
 ?>

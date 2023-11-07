@@ -4,7 +4,8 @@
 
     $nom        = $_SESSION[ 'nom' ];
     $prenom     = $_SESSION[ 'prenom' ];
+    $age        = $_SESSION[ 'age' ];
 
-    print( "<h1>hello $prenom $nom</h1>");
+    print( "<h1>monAge $prenom $nom $age</h1>");
     
 ?>
