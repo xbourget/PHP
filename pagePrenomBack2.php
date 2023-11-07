@@ -8,9 +8,9 @@
         if ( $nom != "" )
         {
             $_SESSION[ 'nom'  ] = $nom;
-            header( 'location: '$__url.'/PHP/pagePrenomFront3.php'   );
+            header( 'location: '.$__url.'/PHP/pageAgeFront3.php'   );
         }
         else
-            header( 'location: '$__urL.'/PHP/pagePrenomFront2.html'   );
+            header( 'location: '.$__urL.'/PHP/pagePrenomFront2.php'   );
     }
 ?>
