@@ -2,7 +2,7 @@
 
     session_start();
 
-    print( session_save_path());
+    // print( session_save_path());
     $nom = $_SESSION['nom'];
     $prenom = $_SESSION['prenom'];
         
