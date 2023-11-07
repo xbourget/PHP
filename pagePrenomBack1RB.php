@@ -1,4 +1,6 @@
 <?php
+include "parametreRB.php"
+
     session_start(); //permet de garder en mémoire les informations demandées à l'utilisateur
 
     if( !empty($_POST))

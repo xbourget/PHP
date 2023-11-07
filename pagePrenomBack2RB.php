@@ -1,4 +1,5 @@
 <?php
+include "parametreRB.php"
     session_start();
 
     if( !empty($_POST))
