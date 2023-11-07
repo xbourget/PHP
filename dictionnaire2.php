@@ -29,6 +29,19 @@
     ];
 
 
+
+    $promo[ 'momo' ][ 'cuisine' ] = 'hareng';
+
+    $promo[ 'pipa' ] = [ 'age' => 22,
+                         'poids' => 61,
+                         'ville' => 'caen'
+                        ];
+
+
+    unset( $promo[ 'momo' ][ 'cuisine' ] );
+
+
+
     foreach ( $promo as $eleve => $data ) 
     {
         print( "elève : $eleve :<br>");
@@ -40,12 +53,14 @@
                 print_r( $value );
                 print ( "<br>");
             }
-
             else
                 print ( "----- $key => $value<br>");
         }
         print( "-------------------<br>");
     }
 
-    print( $promo[ 'momo' ][ 'poids']  );
+    print( $promo[ 'momo' ][ 'poids'].'<br>'  );
+
+    print( json_encode( $promo)  );
+
 ?>
