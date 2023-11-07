@@ -58,10 +58,27 @@
 
     function createForm( $urlAction, $name,  $message="" )
     {
-    print( '<form action="'.$urlAction.'" method="post">');
-        print(' <input type="text" name="'.$name.'" placeholder="'.$message.'" />'); 
+        print( '<form action="'.$urlAction.'" method="post">');
+            print(' <input type="text" name="'.$name.'" placeholder="'.$message.'" />'); 
+            print(' <input type="submit" name="submit" value="OK" />');
+        print(' </form>');
+    }
+
+    function startForm( $urlAction )
+    {
+        print( '<form action="'.$urlAction.'" method="post">');
+    }
+
+    function endForm( )
+    {
         print(' <input type="submit" name="submit" value="OK" />');
-    print(' </form>');
+        print(' </form>');
+    }
+
+    function createInput( $name,  $message="" )
+    {
+        print(' <input type="text" name="'.$name.'" placeholder="'.$message.'" />'); 
+        print( '<br>' );
     }
 ?>
 
