@@ -42,17 +42,6 @@
         print( "</table>\n");
     }
 
-
-    function myFooter()
-    {
-        $var = "
-        </body>
-        </html>
-        ";
-        print( $var );
-    }
-
-
     function myTableList( $data )
     {
         print( '<table>' );
