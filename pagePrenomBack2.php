@@ -1,5 +1,4 @@
 <?php
-
     include "parametre.php";
     session_start();
 
