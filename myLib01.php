@@ -61,7 +61,7 @@
         print("<form action='" . $urlAction . "' method='post'>");
 
         foreach( $names as $name ) {
-            print("<input type='text' name='" . $name . "' placeholder='ton " . $name . "' />");
+            print("<input type='text' name='" . $name . "' placeholder='ton " . $name . "' required />");
             print("<br>");
             print("<br>");
         }

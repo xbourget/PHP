@@ -2,7 +2,7 @@
 
     session_start();
 
-    include "myLib01.php";
+    require_once "myLib01.php";
     require_once 'ipconfig.php';
 
     $nom = $_SESSION[ 'nom' ];

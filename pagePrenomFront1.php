@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    include "myLib01.php";
+    require_once "myLib01.php";
     require_once 'ipconfig.php';
 
     myHeader("infos");
@@ -12,11 +12,11 @@
         "age"
     ];
 
+    createForm($_url."/PHP/pagePrenomBack1.php", $names);
+
     if (!empty($_SESSION["message"])) {
         $message = $_SESSION["message"];
-        print('<h1>'.$message.'</h1>');
+        print('<p style="color: red; font-weight: bold;">'.$message.'</p>');
     }
-
-    createForm($_url."/PHP/pagePrenomBack1.php", $names);
 
 ?>
