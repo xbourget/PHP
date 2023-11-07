@@ -9,9 +9,9 @@
         if ( $prenom != "" )
         {
             $_SESSION[ 'prenom'  ] = $prenom;
-            header( 'location: '.$_url.'/PHP/pagePrenomFront2.html'   );
+            header( 'location: '.$__url.'/PHP/pagePrenomFront2.php'   );
         }
         else
-            header( 'location: '.$_url.'/PHP/pagePrenomFront1.html'   );
+            header( 'location: '.$__url.'/PHP/pagePrenomFront1.php'   );
     }
 ?>
