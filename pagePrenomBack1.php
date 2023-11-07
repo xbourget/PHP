@@ -3,15 +3,24 @@
 
     require_once 'ipconfig.php';
 
-    if( !empty($_POST))
-    {
+    if( !empty($_POST)) {
+        
         $prenom = $_POST[ 'prenom' ];
-        if ( $prenom != "" )
-        {
+        $nom = $_POST[ 'nom' ];
+        $age = $_POST[ 'age' ];
+
+        if ( $prenom != "" && $nom != "" && $age != "" ) {
+
             $_SESSION[ 'prenom'  ] = $prenom;
-            header( "location: $myAddress/PHP/pagePrenomFront2.php"   );
+            $_SESSION[ 'nom'  ] = $nom;
+            $_SESSION[ 'age'  ] = $age;
+
+            header( "location: $_url/PHP/pagePrenomFront2.php"   );
+
+        } else {
+
+            header( "location: $_url/PHP/pagePrenomFront1.php"   );
+
         }
-        else
-            header( "location: $myAddress/PHP/pagePrenomFront1.php"   );
     }
 ?>

@@ -5,6 +5,6 @@
     require_once 'ipconfig.php';
 
     myHeader("info nom");
-    createForm($myAddress."/PHP/pagePrenomBack1.php", "prenom");
+    createForm($_url."/PHP/pagePrenomBack1.php", "prenom");
 
 ?>

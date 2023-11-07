@@ -56,10 +56,16 @@
         print( '</table>' );
     }
 
-    function createForm($urlAction, $name) {
+    function createForm($urlAction, $names) {
+
         print("<form action='" . $urlAction . "' method='post'>");
-        print("<input type='text' name='" . $name . "' placeholder='ton " . $name . "' />");
+
+        foreach( $names as $name ) {
+            print("<input type='text' name='" . $name . "' placeholder='ton " . $name . "' />");
+        }
+
         print("<input type='submit' name='submit' value='OK' />");
+        
         print('</form>');
     }    
 
