@@ -12,19 +12,9 @@ Escaladez la montagne pour voir si c'est bien une montagne.
 Quand vous serez au sommet de la montagne, vous ne pourrez plus voir la montagne
 ";
 
-function compteMotInListe( $motATrouver, $liste )
-{
-    $cpt = 0;
-    foreach( $liste as $mot ) 
-        if ($mot == $motATrouver ) 
-            $cpt++;
-    return $cpt;
-}$url = "https://rouenmetropole.opendatasoft.com/api/explore/v2.1/catalog/datasets/eco-counter-sites/records?limit=20";
-
-
-
 
     //$texte = str_replace( $texte );
+    //$texte = mb_strtoupper( $texte, 'UTF-8' );
     $texte = strtoupper( $texte );
     $liste = explode( ' ', $texte );
     //$liste = str_split( ' ', $texte );
@@ -32,14 +22,12 @@ function compteMotInListe( $motATrouver, $liste )
     $listeMotExamine = [];
 
     foreach( $liste as $mot )
-    {
-        if (  in_array( $mot, $listeMotExamine ) == false )
-        {
-            $nbrMotInListe = compteMotInListe( $mot, $liste );
-            print( $mot.' -> '.$nbrMotInListe.'<br>' );
-            array_push( $listeMotExamine, $mot );
-        }
-    }
+        if (  array_key_exists( $mot, $listeMotExamine ) == false )
+            $listeMotExamine[ $mot ] = 1;
+        else
+            $listeMotExamine[ $mot ]++;
 
+    foreach ($listeMotExamine as $mot => $quantite) 
+        print( $mot.' : '.$quantite.'<br>' );
 
 ?>
