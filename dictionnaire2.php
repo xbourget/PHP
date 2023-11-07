@@ -29,7 +29,11 @@
     ];
     
 
+    $promo['momo']['cuisine'] = 'hareng';
 
+    $promo['pipo'] = ['age' => 23, 'poids' => 74];
+
+    unset($promo['momo']['cuisine']);
 
 
     foreach ( $promo as $eleve => $data ) 
