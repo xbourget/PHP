@@ -7,7 +7,7 @@
         $age = $_POST[ 'age' ];
         if ( $age != "" )
         {
-            $_SESSION[ 'age'  ] = $age;
+            $_SESSION[ 'age'  ] = $age; //stock en session
             header( 'location: '.$__url.'/PHP/pagePrenomFrontFinal.php'   );
         }
         else
