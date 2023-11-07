@@ -27,7 +27,6 @@
                 'loisirs' => ['cuisine', 'foot', 'basket' ]
             ]
     ];
-    
 
     $promo['momo']['cuisine'] = 'hareng';
 
@@ -47,12 +46,14 @@
                 print_r( $value );
                 print ( "<br>");
             }
-
             else
                 print ( "----- $key => $value<br>");
         }
         print( "-------------------<br>");
     }
 
-    print( $promo[ 'momo' ][ 'poids']  );
+    print( $promo[ 'momo' ][ 'poids'].'<br>'  );
+
+    print( json_encode( $promo)  );
+
 ?>
