@@ -8,5 +8,5 @@
     myTable( 4, 4, ":)" );
     myTable( 8, 5);
 
-    myFooter(1);
+    myFooter();
 ?>
