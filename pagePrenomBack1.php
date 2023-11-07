@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    require_once 'ipconfig.php';
+    require_once 'config.php';
 
     $_SESSION['message'] = "";
 

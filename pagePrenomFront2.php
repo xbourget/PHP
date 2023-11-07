@@ -3,7 +3,7 @@
     session_start();
 
     require_once "myLib01.php";
-    require_once 'ipconfig.php';
+    require_once 'config.php';
 
     $nom = $_SESSION[ 'nom' ];
     $prenom = $_SESSION[ 'prenom' ];
