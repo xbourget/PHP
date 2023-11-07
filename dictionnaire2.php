@@ -1,5 +1,4 @@
 <?php
-
     $promo =
     [
         'toto' => 
@@ -7,32 +6,64 @@
                 'age'   => 17,
                 'poids' => 76,
                 'ville' => 'Rouen',
-                'permis' => 0
+                'permis' => false
             ],
 
-            'momo' => 
+        'momo' => 
             [
                 'age'   => 30,
                 'poids' => 88,
                 'ville' => 'Rouen',
-                'permis' => true
+                'permis' => true,
+                'sport' => 'natation'
             ],
 
-            'pipo' => 
+        'pipo' => 
             [
                 'age'   => 22,
                 'poids' => 91,
                 'ville' => 'Havre',
-                'permis' => true
+                'permis' => true,
+                'loisirs' => ['cuisine', 'foot', 'basket' ]
             ]
 
     ];
+<<<<<<< HEAD
     $promo['toto']['musique'] = 'Rock'; 
+=======
+
+
+    $promo[ 'momo' ][ 'cuisine' ] = 'hareng';
+
+    $promo[ 'pipa' ] = [ 'age' => 22,
+                         'poids' => 61,
+                         'ville' => 'caen'
+                        ];
+
+
+    unset( $promo[ 'momo' ][ 'cuisine' ] );
+
+
+>>>>>>> origin/xavier
     foreach ( $promo as $eleve => $data ) 
     {
         print( "elève : $eleve :<br>");
         foreach ( $data as $key => $value) 
-            print ( "----- $key => $value<br>");
+        {
+            if ( gettype( $value ) == 'array'  )
+            {
+                print ( "----- $key => ");
+                print_r( $value );
+                print ( "<br>");
+            }
+            else
+                print ( "----- $key => $value<br>");
+        }
         print( "-------------------<br>");
     }
+
+    print( $promo[ 'momo' ][ 'poids'].'<br>'  );
+
+    print( json_encode( $promo)  );
+
 ?>
