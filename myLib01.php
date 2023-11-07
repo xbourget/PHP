@@ -62,10 +62,12 @@
 
         foreach( $names as $name ) {
             print("<input type='text' name='" . $name . "' placeholder='ton " . $name . "' />");
+            print("<br>");
+            print("<br>");
         }
 
         print("<input type='submit' name='submit' value='OK' />");
-        
+
         print('</form>');
     }    
 

@@ -3,8 +3,10 @@
 
     require_once 'ipconfig.php';
 
+    $_SESSION['message'] = "";
+
     if( !empty($_POST)) {
-        
+
         $prenom = $_POST[ 'prenom' ];
         $nom = $_POST[ 'nom' ];
         $age = $_POST[ 'age' ];
@@ -19,6 +21,7 @@
 
         } else {
 
+            $_SESSION[ 'message'  ] = "Merci de remplir tous les champs!";
             header( "location: $_url/PHP/pagePrenomFront1.php"   );
 
         }
