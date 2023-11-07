@@ -44,7 +44,14 @@
     }
 
     function myTableList( $data )
-    {
+    {function myFooter()
+        {
+            $var = "
+            </body>
+            </html>
+            ";
+            print( $var );
+        }
         print( '<table>' );
         for( $i = 0 ; $i < count( $data ) ; $i++ )
         {
@@ -57,5 +64,12 @@
     }
 
 
+    function createForm( $urlAction, $name,  $message="" )
+    {
+    print( '<form action="'.$urlAction.'" method="post">');
+        print(' <input type="text" name="'.$name.'" placeholder="'.$message.'" />'); 
+        print(' <input type="submit" name="submit" value="OK" />');
+    print(' </form>');
+    }
 ?>
 
