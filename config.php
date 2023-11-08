@@ -1,7 +1,12 @@
 <?php
+
+// IP address as URL
 $_url = "http://192.168.1.60";
 
-$hostname = "";
-$username = "";
+// MySQL credentials
+$hostname = "localhost";
+$username = "root";
 $password = "";
+$dbname = "zoo";
+
 ?>
