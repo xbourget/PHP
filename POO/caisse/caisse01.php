@@ -28,9 +28,6 @@
 
 
 
-    print( $facture2 );
-
-
 
 
 ?>
