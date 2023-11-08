@@ -30,7 +30,4 @@
 
     print( $facture2 );
 
-
-
-
 ?>

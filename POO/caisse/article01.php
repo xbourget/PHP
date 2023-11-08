@@ -1,8 +1,10 @@
 <?php
     class Article
     {
-
-        public function __construct( $n, $p ) 
+        private string $nom;
+        private float $prix;
+        
+        public function __construct( string $n, float $p ) 
         {
             $this->nom  = $n;  // copie des variables 
             $this->prix = $p;  // dans les variables
