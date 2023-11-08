@@ -1,5 +1,5 @@
 <?php
-    include "parametres.php";
+    include "parametre.php";
 
     session_start();
 
@@ -9,16 +9,10 @@
         if ( $prenom != "" )
         {
             $_SESSION[ 'prenom'  ] = $prenom;
-
-            header( 'location: http://192.168.1.17/PHP/pagePrenomFront2.html'   );
+            header( 'location: '.$__url.'/PHP/pagePrenomFront2.php'   );
         }
         else
-            header( 'location: http://192.168.1.17/PHP/pagePrenomFront1.html'   );
-
-            header( 'location: '.$url.'/PHP/pagePrenomFront2.php'   );
-        }
-        else
-            header( 'location: '.$url.'/PHP/pagePrenomFront1.php'   );
-
-    
+            header( 'location: '.$__url.'/PHP/pagePrenomFront1.php'   );
+    }
 ?>
+
