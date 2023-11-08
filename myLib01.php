@@ -75,9 +75,9 @@
         print(' </form>');
     }
 
-    function createInput( $name,  $message="" )
+    function createInput( $name,  $message="", $value=""  )
     {
-        print(' <input type="text" name="'.$name.'" placeholder="'.$message.'" />'); 
+        print(' <input type="text" name="'.$name.'" placeholder="'.$message.'" value="'.$value.'" />'); 
         print( '<br>' );
     }
 
