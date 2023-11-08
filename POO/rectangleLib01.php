@@ -4,24 +4,25 @@
 
     class Rectangle extends PointColor
     {
-        protected int $cote;       // variable d'instance
+        protected int $largeur;       // variable d'instance
+        protected int $longueur;       // variable d'instance
     
-        public function __construct( $x, $y, $cote, $c='blanc' ) 
+        public function __construct( $x, $y, $l, $L, $c='blanc' ) 
         {
             parent::__construct( $x, $y, $c);
-            $this->x = $x;
-            $this ->y = $y; 
+            $this->largeur = $l;  // copie des variables 
+            $this->longueur = $L;  // copie des variables 
         }                   // d'instance
 
         public function __toString()
         {
             $pc = parent::__toString();
-            return 'RECTANGLE'.$pc.', cote='.$this->cote;
+            return 'RECTANGLE'.$pc.', largeur='.$this->largeur.' ,longueur='.$this->longueur;
         }        
 
         public function surface()
         {
-            return $this->cote * $this->cote;
+            return $this->largeur * $this->longueur;
         }        
     }
 ?>
