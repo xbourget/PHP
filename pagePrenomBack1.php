@@ -1,6 +1,9 @@
 <?php
+    include "parametre.php";
+
     session_start();
 
+<<<<<<< HEAD
     require_once 'config.php';
 
     $_SESSION['message'] = "";
@@ -25,5 +28,17 @@
             header("location: $_url/PHP/pagePrenomFront1.php");
 
         }
+=======
+    if( !empty($_POST))
+    {
+        $prenom = $_POST[ 'prenom' ];
+        if ( $prenom != "" )
+        {
+            $_SESSION[ 'prenom'  ] = $prenom;
+            header( 'location: '.$__url.'/PHP/pagePrenomFront2.php'   );
+        }
+        else
+            header( 'location: '.$__url.'/PHP/pagePrenomFront1.php'   );
+>>>>>>> origin/xavier
     }
 ?>
