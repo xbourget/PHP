@@ -3,7 +3,6 @@
     {
         private string $nom;
         private float $prix;
-        
         public function __construct( string $n, float $p ) 
         {
             $this->nom  = $n;  // copie des variables 
@@ -19,7 +18,5 @@
         {
             return $this->prix;
         }
-        
-        
     }
 ?>
