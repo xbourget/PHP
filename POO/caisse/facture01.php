@@ -4,8 +4,8 @@
 
     class Facture
     {
-        protected string $client;       // variable d'instance
-        protected $articles = [];       // variable d'instance
+        protecte string $client;       // variable d'instance
+        protecte $articles = [];       // variable d'instance
     
         public function __construct( $c ) 
         {
@@ -27,6 +27,7 @@
             {
                 print(  ++$cpt."  ".$line['art'].' X '.$line['qte'].'   = '.($line['art']->getPrix()*$line['qte']).'<br>' );
             }
+            print( "<br>num facture :"<div class="Facture">::$nb.'<br>');
         }                   
     }
 ?>
