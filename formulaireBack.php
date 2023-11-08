@@ -1,4 +1,5 @@
 <?php
+ include "parametre1.php";
     //http://localhost/PHP/formulaire1.php?nom=dupond&prenom=juste&submit=OK
 
     session_start();
@@ -12,7 +13,7 @@
         $_SESSION[ 'nom'  ] = $nom;
         $_SESSION[ 'prenom'  ] = $prenom;
 
-        header( 'location: http://192.168.1.152/PHP/formulaireSuite.php'   ); 
+        header( 'location: '.$__url.'/PHP/formulaireSuite.php'   ); 
     }
     //$_SERVER['REQUEST_URI']
 ?>

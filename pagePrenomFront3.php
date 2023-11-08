@@ -1,8 +1,8 @@
 <?php
     include "myLib01.php";
-    include "parametre.php";
+    include "parametr1.php";
 
     myHeader( 'info nom' );
-    createForm( $__url."/PHP/pagePrenomBack3.php", "age",  "ton age" );
+    createForm( $_url."/PHP/pagePrenomBack3.php", "age",  "ton age" );
     myFooter();
 ?>
