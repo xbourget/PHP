@@ -9,13 +9,14 @@
         public function __construct( $x, $y, $cote, $c='blanc' ) 
         {
             parent::__construct( $x, $y, $c);
-            $this->cote = $cote;  // copie des variables 
+            $this->x = $x;
+            $this ->y = $y; 
         }                   // d'instance
 
         public function __toString()
         {
             $pc = parent::__toString();
-            return 'CARRÉ'.$pc.', cote='.$this->cote;
+            return 'RECTANGLE'.$pc.', cote='.$this->cote;
         }        
 
         public function surface()
