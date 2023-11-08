@@ -19,5 +19,13 @@
         {
             return $this->prix;
         }
+
+        public function getNom()
+        {
+            return $this->nom;
+        }
+
+        
+
     }
 ?>
