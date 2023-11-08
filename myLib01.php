@@ -58,7 +58,7 @@
     }
 
 
-    function createForm( $urlAction, $name,  $message="" )
+    function createForm( $urlAction, $name, $age,   $message="" )
     {
     print( '<form action="'.$urlAction.'" method="post">');
         print(' <input type="text" name="'.$name.'" placeholder="'.$message.'" />'); 
