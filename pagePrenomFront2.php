@@ -3,6 +3,6 @@
     include "parametre.php";
 
     myHeader( 'info nom' );
-    createForm( $url."/PHP/pagePrenomBack2.php", "nom",  "ton nom" );
+    createForm( $__url."/PHP/pagePrenomBack2.php", "nom",  "ton nom" );
     myFooter();
 ?>
