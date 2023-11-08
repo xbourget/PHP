@@ -17,7 +17,7 @@
         public function __toString()
         {
             $pc = parent::__toString();
-            return 'TRIANGLE'.$pc.', largeur='.$this->largeur.', hauteur='.$this->hauteur;
+            return 'TRIANGLe'.$pc.', largeur='.$this->largeur.', hauteur='.$this->hauteur;
         }        
 
         public function surface()
