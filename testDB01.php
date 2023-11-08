@@ -2,8 +2,6 @@
     require "parametre.php";
     require "myLib01.php";
 
-
-
     if( !empty($_POST))
     {
         $nom = $_POST[ 'nom' ];
