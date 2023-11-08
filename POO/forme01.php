@@ -28,7 +28,7 @@ include "rectangleLibM01.php";
     print( "<br>" );
     print($r1M);
     print( "<br>" );
-    print($r1M->aire());
+    print($r1M->surface());
     print( "<br>" );
     print($r1M->perimetre());
 ?>

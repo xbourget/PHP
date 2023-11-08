@@ -20,7 +20,7 @@
             return 'Rectangle'.$pc.', largeur='.$this->largeur. ' '. 'hauteur=' . $this->hauteur;
         }        
 
-        public function aire()
+        public function surface()
         {
             return $this->largeur * $this->hauteur;
         }
