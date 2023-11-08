@@ -10,7 +10,7 @@
             $this->y = $y;  // dans les variables
         }                   // d'instance
 
-        public function show()  // la méthode show 
+        public function show()  // la méthode show retourne, ici, les coordonnées ds le plan
         {
             print( '('.$this->x.', '.$this->y.')' );
         }

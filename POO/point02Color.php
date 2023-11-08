@@ -16,15 +16,15 @@
         }
     }
 
-    class PointColor extends Point      // dérivation de 
-                                        // la class Point 
+    class PointColor extends Point      // dérivation de la class Point
+                                        
     {
         protected string $color;
     
         public function __construct( int $x, int $y, string $c ) 
         {   
-            parent::__construct( $x, $y );
-            // appel du constructeur parent 
+            parent::__construct( $x, $y );// appel du constructeur parent
+             
             $this->color = $c;
         }
 
