@@ -11,6 +11,11 @@ include "carreLib01.php";
     $r1 = new Rectangle( 105, 106, 17, 33 );
 
     $p1 = new Point( 2, 90 );
+    $p2 = new Point( 12, _17 );
+    $p3 = new Point( 2, 90 );
+    $p4 = new Point( 2, 90 );
+    $p5 = new Point( 2, 90 );
+    $p6 = new Point( 2, 90 );
 
     $r1M = new Rectangle(5, 10, 15, 9, "noir");
 
