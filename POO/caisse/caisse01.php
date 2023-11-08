@@ -25,10 +25,18 @@
     $facture2->addArticle( $bott, 1 );
 
     $facture2->edit();
-
-
-
-    print( $facture2 );
+    class Rectangle:
+    def __init__(self,longueur,largeur):
+        self.longueur = longueur
+        self.largeur = largeur
+        
+    # Méthode qui calcul le périmètre
+    def Perimetre(self):
+        return 2*(self.longueur + self.largeur)
+    
+    # Méthode qui calcul la surface
+    def Surface(self):
+        return self.longueur*self.largeur
 
 
 
