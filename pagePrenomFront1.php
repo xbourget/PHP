@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
     session_start();
@@ -20,13 +19,4 @@
         print('<p style="color: red; font-weight: bold;">'.$message.'</p>');
     }
 
-=======
-<?php
-    include "myLib01.php";
-    include "parametre.php";
-
-    myHeader( 'info nom' );
-    createForm( $__url."/PHP/pagePrenomBack1.php", "prenom",  "ton prenom" );
-    myFooter();
->>>>>>> origin/xavier
 ?>
