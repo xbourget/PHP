@@ -12,8 +12,6 @@ include "carreLib01.php";
 
     $p1 = new Point( 2, 90 );
 
-    $r1M = new Rectangle(5, 10, 15, 9, "noir");
-
     print( $t1 );
     print( "<br>" );
     print( $t2 );
@@ -29,4 +27,25 @@ include "carreLib01.php";
     print( "<br>" );
     print( $k1->surface() );
     print( "<br>" );
+
+    print( $r1->surface() );
+    print( "<br>" );
+
+
+
+    $formes = [ $t1, $t2, $k1, $r1 ];
+
+
+    $surfaceTotale = 0;
+    foreach ($formes as $forme ) 
+    {
+        $surfaceTotale += $forme->surface();
+        print( $forme.'<br>' );
+    }
+
+    print( "surface totale : ".$surfaceTotale.'<br>' );
+
+
+
+
 ?>
