@@ -1,6 +1,7 @@
 <?php
     class Article
     {
+    
 
         public function __construct( $n, $p ) 
         {
