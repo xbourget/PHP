@@ -9,7 +9,7 @@ include "rectangleLib01.php";
 
     $k1 = new Carre( 15, -1, 17 );
 
-    $r1 = new Rectangle(3, 4, 6, 3);
+    $r1 = new Rectangle( 105, 106, 17, 33 );
 
     $p1 = new Point( 2, 90 );
 
@@ -28,6 +28,25 @@ include "rectangleLib01.php";
     print( "<br>" );
     print( $k1->surface() );
     print( "<br>" );
+
     print( $r1->surface() );
     print( "<br>" );
+
+
+
+    $formes = [ $t1, $t2, $k1, $r1 ];
+
+
+    $surfaceTotale = 0;
+    foreach ($formes as $forme ) 
+    {
+        $surfaceTotale += $forme->surface();
+        print( $forme.'<br>' );
+    }
+
+    print( "surface totale : ".$surfaceTotale.'<br>' );
+
+
+
+
 ?>
