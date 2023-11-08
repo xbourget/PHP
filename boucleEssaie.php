@@ -1,18 +1,31 @@
 <?php
 
-    $temperature = -20;
-    do {
+    //une boucle de -20 à 40 avec des incréments de 5
 
-        if($temperature <= 0) 
-            print("Y fait froid.... Y fait $temperature degré");
-        elseif($temperature > 0 && $temperature <= 25)
-            print("Y fait bon... Y fait $temperature degré");
+    for(    $temprature = -20 ; 
+            $temprature <= 40  ; 
+            $temprature = $temprature + 5, print( '<br>'))
+
+            if ( $temprature < 0 )
+            print( 'gla gla' );
+        elseif ( $temprature < 18 )
+            print( 'bof bof' );
+        elseif ( $temprature < 25 )
+            print( 'good !!!' );
+        elseif ( $temprature < 35 )
+            print( 'pfff !!!' );
         else
-            print("Y fait trop chaud ! Y fait $temperature degré");
-        
-        $temperature = $temperature + 5;
-        print('</br>');
+            print( 'enfer!!!' );
 
-    } while ($temperature <= 40);
 
-?>
+
+    for( $temprature = -20 ; $temprature <= 40  ; $temprature = $temprature + 5)
+    {
+        if ( $temprature < 0 )
+            print( 'gla gla' );
+ 
+        if ( $temprature < 18 && $temprature > 15 )
+            print( 'bof bof' );
+    }
+    
+    ?>
