@@ -34,13 +34,30 @@
             }
         }
         
-        public function listerClasses()
+        public function listerClasses( String $nameClasse)
         {
+            $classe = $this->getClasseByName( $nameClasse );
+            if ( $classe == NULL )
+                return;
+            print( 'Classe : '.$classe.'<br>' );
+            print( 'prof   : '.$classe->getEnseignant().'<br>' );
+            $this->listerEleves( $nameClasse);
+        }
+
+        public function afficherClasses()
+        {
+            foreach ($this->listClasses as $classe)
+            {
+                print( $classe. '<br>' );
+            }
+        }
+
+       /* {
             foreach ($this->listClasses as $classe ) 
             {
                 print( $classe.'<br>' );
             }
-        }
+        }*/
 
         public function getIndividusByName( $name )
         {
@@ -108,7 +125,7 @@
         }
         
 
-        public function afficherClasse( string $nameClasse)
+       public function afficherClasse( string $nameClasse)
         {
             $classe = $this->getClasseByName( $nameClasse );
             if ( $classe == NULL )
