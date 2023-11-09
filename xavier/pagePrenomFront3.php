@@ -1,10 +1,8 @@
 <?php
+    include "myLib01.php";
+    include "parametre.php";
 
-    session_start();
-
-    $nom        = $_SESSION[ 'nom' ];
-    $prenom     = $_SESSION[ 'prenom' ];
-
-    print( "<h1>hello $prenom $nom</h1>");
-    
+    myHeader( 'info nom' );
+    createForm( $__url."/PHP/pagePrenomBack3.php", "age",  "ton age" );
+    myFooter();
 ?>
