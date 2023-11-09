@@ -26,11 +26,4 @@
 
     $facture2->edit();
 
-
-
-    print( $facture2 );
-
-
-
-
 ?>
