@@ -19,7 +19,18 @@
         {
             return $this->prix;
         }
+<<<<<<< HEAD
         
         
+=======
+
+        public function getNom()
+        {
+            return $this->nom;
+        }
+
+        
+
+>>>>>>> origin/xavier
     }
 ?>
