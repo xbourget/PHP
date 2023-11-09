@@ -15,7 +15,7 @@
             $this->nom  = $nom; 
         }                   
  
-        public function addIndividus( Individus $individus  )
+        public function addIndividus( ?Individus &$individus  )
         {
             array_push( $this->listIndividus, $individus );
         }
@@ -59,11 +59,11 @@
             }
         }*/
 
-        public function getIndividusByName( $name )
+        public function getIndividusByName( $name ) : Individus
         {
             foreach ($this->listIndividus as $individus ) 
             {
-                if ( $individus->getName() == $name )
+                if ( $individus != NULL && $individus->getName() == $name )
                     return $individus;
             }
             return NULL;
@@ -79,7 +79,12 @@
             return NULL;
         }
 
-        public function addEleve( Eleve $eleve, string $nameClasse  )
+        public function addEleve( Individus $eleve, string $nameClasse  )
+        {
+            $this->add2Classe( $eleve,  $nameClasse );
+        }
+
+        public function add2Classe( Individus $eleve, string $nameClasse  )
         {
             $nameEleve = $eleve->getName();
             $this->addIndividus( $eleve );
@@ -110,7 +115,7 @@
         {
             foreach ($this->listIndividus as $individus ) 
             {
-                if ( get_class( $individus) == 'Eleve' )
+                if ( $individus != NULL && get_class( $individus ) == 'Eleve' )
                 {
                     if ( $nameClasse == '' )
                         print( $individus.'<br>' );
@@ -131,8 +136,23 @@
             if ( $classe == NULL )
                 return;
             print( 'Classe : '.$classe.'<br>' );
-            print( 'Prof   : '.$classe->getEnseignant().'<br>' );
+            if ( $classe->getEnseignant() != NULL )
+                print( 'Prof   : '.$classe->getEnseignant().'<br>' );
+            else 
+                print( 'Prof   : non affecté<br>' );
             $this->listerEleves( $nameClasse );
+        }
+
+        public function afficherClasses()
+        {
+            foreach ($this->listClasses as $classe) 
+            {
+                $name = $classe->getName();
+                $this->afficherClasse( $name );
+                print( '***************<br>');
+    
+            }
+
         }
     }
 ?>

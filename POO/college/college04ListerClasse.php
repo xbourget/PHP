@@ -20,28 +20,31 @@
     $college1->addIndividus(  new Enseignant( 'tournesol', 12 )  );
     $college1->addIndividus(  new Enseignant( 'baracuda', 12 )  );
 
+    $college1->addIndividus(  new Eleve( 'inconnu')  );
+    $college1->addIndividus(  NULL  );
+
     $college1->affecterA(  'maboulette', '5eme D');
     $college1->affecterA(  'tournesol', '6eme G');
     $college1->affecterA(  'baracuda', '6eme A');
     
 
 
-    $college1->addEleve(  new Eleve( 'prout' ),     '5eme D' );
-    $college1->addEleve(  new Eleve( 'dingue' ),    '5eme D' );
-    $college1->addEleve(  new Eleve( 'mickey' ),    '5eme D' );
-    //$college1->addEleve(  new Enseignant( 'pierre' ),    '5eme D' );
+    $college1->add2Classe(  new Eleve( 'prout' ),     '5eme D' );
+    $college1->add2Classe(  new Eleve( 'dingue' ),    '5eme D' );
+    $college1->add2Classe(  new Eleve( 'mickey' ),    '5eme D' );
+    $college1->add2Classe(  new Enseignant( 'pierreX', 13 ),    '5eme D' );
    
-    $college1->addEleve(  new Eleve( 'tata' ) ,     '6eme A'  );
-    $college1->addEleve(  new Eleve( 'toto' ),      '6eme A'  );
-    $college1->addEleve(  new Eleve( 'titi' ),      '6eme A'  );
-    $college1->addEleve(  new Eleve( 'tutu' ),      '6eme A'  );
-    //$college1->addEleve(  new Enseignant( 'tintin' ),      '6eme A'  );
+    $college1->add2Classe(  new Eleve( 'tata' ) ,     '6eme A'  );
+    $college1->add2Classe(  new Eleve( 'toto' ),      '6eme A'  );
+    $college1->add2Classe(  new Eleve( 'titi' ),      '6eme A'  );
+    $college1->add2Classe(  new Eleve( 'tutu' ),      '6eme A'  );
+    $college1->add2Classe(  new Enseignant( 'tintinX', 13 ),      '6eme A'  );
 
-    $college1->addEleve(  new Eleve( 'minie' ),     '6eme G'  );
-    $college1->addEleve(  new Eleve( 'dumbo' ),     '6eme G'  );
-    $college1->addEleve(  new Eleve( 'toy' ),       '6eme G'  );
-    $college1->addEleve(  new Eleve( 'crochet' ),   '6eme G'  );
-    //$college1->addEleve(  new Enseignant( 'haddock' ),   '6eme G'  );
+    $college1->add2Classe(  new Eleve( 'minie' ),     '6eme G'  );
+    $college1->add2Classe(  new Eleve( 'dumbo' ),     '6eme G'  );
+    $college1->add2Classe(  new Eleve( 'toy' ),       '6eme G'  );
+    $college1->add2Classe(  new Eleve( 'crochet' ),   '6eme G'  );
+    $college1->add2Classe(  new Enseignant( 'haddockX', 13 ),   '6eme G'  );
 
     print( '<br>=============================<br>'  );
 
@@ -52,11 +55,19 @@
 
     $college1->afficherClasse( '5eme D' );
     $college1->afficherClasse( '6eme A' );
+    $college1->afficherClasse( 'vide' );
 
     print( '<br>=============================<br>'  );
 
     $college1->afficherClasses(  );
+<<<<<<< HEAD
    
+=======
+>>>>>>> origin/xavier
+
+    print( '<br>=============================<br>'  );
+
+    $college1->listerEleves( );
 
     print( '<br>=============================<br>'  );
 ?>
