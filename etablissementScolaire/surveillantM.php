@@ -4,19 +4,20 @@
     class Surveillant extends Personnel
     {
 
+        publ
+
         public function __toString() 
         {
-            return '(Surveillant) '.parent::__toString(); 
+            return '(Surveillant)'.parent::__toString(); 
         }                   
 
         public function travailler()
         {
-            print("je surveille <br> ");
+            print("je surveille ");
         }
 
         public function remunerer()
         {   
-            
             print("je gagne".$this->salaire."<br>");
         }
    }
