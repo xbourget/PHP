@@ -53,7 +53,7 @@
 
     print( '<br>=============================<br>'  );
 
-    $college1->afficherClasses( '5eme D' );
+    $college1->afficherClasses();
 
     print( '<br>=============================<br>'  );
 
