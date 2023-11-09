@@ -4,7 +4,7 @@
     class Classe
     {
         protected string $name;       // variable d'instance
-        protected Enseignant $prof;       // variable d'instance
+        protected array $listeProfs = [];       // variable d'instance
         
         
         public function __construct( public ? string $n=NULL ) 
@@ -22,14 +22,27 @@
             return $this->name;
         }
 
-        public function getEnseignant( ) : Enseignant
+        public function getEnseignant($nom) : ?Enseignant
         {
-            return $this->prof;
+            foreach( $this->listeProfs as $prof ) {
+                    if( $prof->getName() == $nom )
+                        return $prof;
+            }
+            return NULL;
+        }
+
+        public function getEnseignants()
+        {
+            foreach( $this->listeProfs as $prof ) {
+                print($prof->getNom());
+                print('<br>');
+            }
+            print('<br>');
         }
 
         public function setEnseignant( Enseignant &$prof )
         {
-            $this->prof = $prof;
+            array_push($this->listeProfs, $prof);
         }
    }
 ?>

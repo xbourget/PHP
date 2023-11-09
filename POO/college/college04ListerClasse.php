@@ -13,7 +13,7 @@
     $college1->addClasse( new Classe( '5eme D') );
     $college1->addClasse( new Classe( '6eme G') );
     $college1->addClasse( new Classe( '6eme A') );
-    $college1->addClasse( new Classe( 'vide') );
+    //$college1->addClasse( new Classe( 'vide') );
 
 
     $college1->addIndividus(  new Enseignant( 'maboulette', 12 )  );
@@ -55,7 +55,7 @@
 
     print( '<br>=============================<br>'  );
 
-    //$college1->afficherClasses(  );
+    $college1->afficherClasses();
 
     print( '<br>=============================<br>'  );
 ?>

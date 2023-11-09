@@ -3,7 +3,7 @@
 
     class Enseignant extends Personnel
     {
-        protected ?Classe $classe = NULL;
+        protected array $listClasses = [];
 
         public function __toString() 
         {
@@ -18,7 +18,7 @@
 
         public function affecterALaClasse( Classe &$classe )
         {
-            $this->classe  = $classe;
+            array_push($this->listClasses, $classe);
             $classe->setEnseignant( $this );
         }
    }
