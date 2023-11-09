@@ -22,7 +22,9 @@
  
         public function affecterALaClasse( Classe &$classe )
         {
-            $this->classe  = $classe; 
+            $this->classe  = $classe;
+            print( $this->name.'affecté à '.$classe->getName()."<br>"  );
+            //$classe->setEnseignant( $this );
         }
 
         public function travailler()
@@ -37,6 +39,5 @@
         {
             return $this->classe;          
         }
-
     }
 ?>

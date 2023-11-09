@@ -22,7 +22,7 @@
             return $this->name;
         }
 
-        public function getEnseignant( )
+        public function getEnseignant( ) : Enseignant
         {
             return $this->prof;
         }

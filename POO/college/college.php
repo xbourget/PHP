@@ -108,7 +108,7 @@
         }
         
 
-        public function afficherClasses( string $nameClasse)
+        public function afficherClasse( string $nameClasse)
         {
             $classe = $this->getClasseByName( $nameClasse );
             if ( $classe == NULL )
