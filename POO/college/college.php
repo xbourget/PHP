@@ -82,7 +82,7 @@
             $classe = $this->getClasseByName( $nameClasse );
             if ( $classe ==  NULL )
             {
-                print( "la classe $classeName n'existe pas.");
+                print( "la classe $nameClasse n'existe pas.");
                 return;
             }
 
@@ -116,6 +116,15 @@
             print( 'Classe : '.$classe.'<br>' );
             print( 'Prof   : '.$classe->getEnseignant().'<br>' );
             $this->listerEleves( $nameClasse );
+        }
+
+        public function afficherClasses() 
+        {
+            foreach ($this->listClasses as $classe) 
+            {
+                $this->afficherClasse($classe->getName());
+
+            }
         }
     }
 ?>

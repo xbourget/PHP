@@ -1,5 +1,5 @@
 <?php
-    include_once "individus.php";
+    include_once "individusM.php";
 
      class Classe   
     {
