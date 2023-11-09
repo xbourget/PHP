@@ -1,18 +1,15 @@
 <?php
-
     include_once "article01.php";
+    include_once "client01.php";
 
     class Facture
     {
-        protected string $client;       // variable d'instance
+        protected Client $client;       // variable d'instance
         protected $articles = [];       // variable d'instance
-
-        static int $nbrFacture = 0;
         
-        public function __construct( $c ) 
+        public function __construct( Client $c ) 
         {
             $this->client  = $c; 
-            Facture::$nbrFacture++;
         }                   
 
         public function addArticle( Article $art, int $qte ) 
@@ -30,9 +27,6 @@
             {
                 print(  ++$cpt."  ".$line['art'].' X '.$line['qte'].'   = '.($line['art']->getPrix()*$line['qte']).'<br>' );
             }
-            print(  "<br>num Facture : ".Facture::$nbrFacture.'<br>' );
-
-
         }                   
     }
 ?>
