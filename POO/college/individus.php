@@ -2,18 +2,23 @@
 
     abstract class Individus
     {
-        protected string $nom;       // variable d'instance
+        protected string $name;       // variable d'instance
         
         public function __construct( string $n ) 
         {
-            $this->nom  = $n; 
+            $this->name  = $n; 
         }                   
 
         public function __toString() 
         {
-            return $this->nom.'<br>'; 
+            return $this->name.'<br>'; 
         }  
         
+        public function getName( )
+        {
+            return $this->name;
+        }
+
         abstract public function travailler();
    }
 ?>
