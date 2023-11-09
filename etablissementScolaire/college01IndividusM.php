@@ -1,7 +1,7 @@
 <?php
     include_once "enseignantM.php";
     include_once "surveillantM.php";
-    include_once "personnelM.php";
+    
 
     $enseignant1 = new Enseignant('Tournesol: ', 5);
 
@@ -14,6 +14,6 @@
     $surveillant1->travailler();
 
     $enseignant1->remunerer();
-    print($enseignant1);
+    
    
 ?>

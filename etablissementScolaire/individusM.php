@@ -3,19 +3,24 @@
 
     abstract class Individus   // classe abstract: ne peut pas être instanciée
     {
-        protected string $nom;       
+        protected string $name;       
           
         
         public function __construct( string $n ) 
         {
-            $this->nom  = $n; 
+            $this->name  = $n; 
         }                   
 
         public function __toString() 
         {
 
-            return $this->nom; 
-        }                   
+            return $this->name; 
+        }
+
+        public function getName()
+        {
+            return $this->name;
+        }
 
         abstract public function travailler();  // veut dire que tous les enfants doivent implémenter cette méthode
         

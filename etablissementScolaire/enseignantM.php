@@ -6,7 +6,7 @@
 
         public function __toString() 
         {   
-            return '(Enseignant)'.parent::__toString(); 
+            return '(Enseignant) '.parent::__toString(); 
         }                   
 
         public function travailler()

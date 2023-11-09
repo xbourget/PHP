@@ -1,17 +1,17 @@
 <?php
-    include_once "personnel.php";
+    include_once "personnelM.php";
 
     class Surveillant extends Personnel
     {
 
         public function __toString() 
         {
-            return '(Surveillant)'.parent::__toString(); 
+            return '(Surveillant) '.parent::__toString(); 
         }                   
 
         public function travailler()
         {
-            print("je surveille ");
+            print("je surveille <br> ");
         }
 
         public function remunerer()

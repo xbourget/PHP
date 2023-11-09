@@ -3,13 +3,27 @@
 
     class Eleve extends Individus
     {
-        protected string $niveau;
+        protected string $niveau ='';
+        protected Classe $classe;
 
         public function __construct(string $nom, string $niveau)
         {
             parent::__construct($nom);
             $this->niveau = $niveau;
         }                  
+
+        public function __toString() 
+        {   
+            return '(Eleve, classe de '.$this->niveau.') '.parent::__toString(); 
+        }
+
+
+        public function affecterALaClasse(Classe &$classe)
+        {
+            $this->classe = $classe;
+        }
+
+
 
         public function travailler()
         {
