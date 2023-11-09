@@ -3,7 +3,8 @@
 
     class Enseignant extends Personnel
     {
-        
+        protected ?Classe $classe = NULL;
+
         public function __toString() 
         {
             return '(Enseignant)'.parent::__toString(); 
@@ -13,6 +14,12 @@
         {
             //parent::travailler();
             print( "j'enseigne...<br>");
+        }
+
+        public function affecterALaClasse( Classe &$classe )
+        {
+            $this->classe  = $classe;
+            $classe->setEnseignant( $this );
         }
    }
 ?>
