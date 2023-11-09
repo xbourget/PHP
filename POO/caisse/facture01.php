@@ -30,12 +30,8 @@
             {
                 print(  ++$cpt."  ".$line['art'].' X '.$line['qte'].'   = '.($line['art']->getPrix()*$line['qte']).'<br>' );
             }
-<<<<<<< HEAD
-            print(  " <br> numéro facture: ".Facture::$nbFacture.'<br>' );
-=======
             print(  "<br>num Facture : ".Facture::$nbrFacture.'<br>' );
 
->>>>>>> origin/xavier
 
         }                   
     }
