@@ -12,6 +12,11 @@ include "rectangleLib01.php";
     $r1 = new Rectangle( 105, 106, 17, 33 );
 
     $p1 = new Point( 2, 90 );
+    $p2 = new Point( 12, _17 );
+    $p3 = new Point( 2, 90 );
+    $p4 = new Point( 2, 90 );
+    $p5 = new Point( 2, 90 );
+    $p6 = new Point( 2, 90 );
 
     print( $t1 );
     print( "<br>" );
@@ -43,8 +48,20 @@ include "rectangleLib01.php";
         $surfaceTotale += $forme->surface();
         print( $forme.'<br>' );
     }
-
     print( "surface totale : ".$surfaceTotale.'<br>' );
+
+   
+
+    print( "nbr Points : ".Point::$nbrPoint.'<br>' );
+    //unset( $p1 );
+    $t1 = NULL ;
+    print( "nbr Points : ".Point::$nbrPoint.'<br>' );
+
+
+    print( "distance : ".Point::distance( $p1, $p2).'<br>' );
+
+
+    print( "---------------------<br>" );
 
 
 

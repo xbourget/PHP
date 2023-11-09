@@ -1,11 +1,11 @@
 <?php
-
     include_once "article01.php";
+    include_once "client01.php";
 
     class Facture
     {
-        protecte string $client;       // variable d'instance
-        protecte $articles = [];       // variable d'instance
+        protected string $client;       // variable d'instance
+        protected $articles = [];       // variable d'instance
     
         public function __construct( $c ) 
         {

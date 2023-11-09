@@ -4,15 +4,23 @@
 
     class Triangle extends PointColor
     {
-        protected int $largeur;       // variable d'instance
-        protected int $hauteur;       // variable d'instance
-    
+        private int $largeur;       // variable d'instance
+        private int $hauteur;       // variable d'instance
+        private int $surface;       // variable d'instance
+           
         public function __construct( $x, $y, $l, $h, $c='blanc' ) 
         {
             parent::__construct( $x, $y, $c);
             $this->largeur = $l;  // copie des variables 
             $this->hauteur = $h;  // dans les variables
-        }                   // d'instance
+            $this->calcSurface();
+        }                   
+
+        public function __destruct() 
+        {
+            print( "je suis dans le dstructeur Tr<br>");
+            parent::__destruct();
+        }                   
 
         public function __toString()
         {
@@ -22,8 +30,23 @@
 
         public function surface()
         {
-            return $this->largeur * $this->hauteur / 2;
+            return $this->surface;
         }        
-    }
 
+        public function setLargeur( $l )
+        {
+            $this->largeur = $l; 
+            $this->calcSurface();
+        }
+
+        public function getLargeur( )
+        {
+            return $this->largeur; 
+        }
+
+        private function calcSurface( )
+        {
+            $this->surface = $this->largeur*$this->hauteur/2; 
+        }
+    }
 ?>
