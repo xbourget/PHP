@@ -20,6 +20,13 @@
         {
             print( '('.$this->x.', '.$this->y.')' );
         }
+
+        public static function distance( $p1, $p2)
+        {
+            $dx = $p1->x - $p2->x;
+            $dy = $p1->y - $p2->y;
+            return sqrt(($dx*$dx) + ($dy*$dy));
+        }
     }
 
     class PointColor extends Point
@@ -31,6 +38,13 @@
             parent::__construct( $x, $y );
             $this->color = $c;
         }
+
+        public function __destruct( ) 
+        {
+            print( "je suis dans le dstructeur PC<br>");
+            parent::__destruct();
+        }                   
+
 
         public function __toString()
         {
