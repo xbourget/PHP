@@ -6,10 +6,13 @@
     {
         protected string $client;       // variable d'instance
         protected $articles = [];       // variable d'instance
-    
+
+        static int $nbrFacture = 0;
+        
         public function __construct( $c ) 
         {
             $this->client  = $c; 
+            Facture::$nbrFacture++;
         }                   
 
         public function addArticle( Article $art, int $qte ) 
@@ -27,6 +30,9 @@
             {
                 print(  ++$cpt."  ".$line['art'].' X '.$line['qte'].'   = '.($line['art']->getPrix()*$line['qte']).'<br>' );
             }
+            print(  "<br>num Facture : ".Facture::$nbrFacture.'<br>' );
+
+
         }                   
     }
 ?>

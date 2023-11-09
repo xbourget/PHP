@@ -1,7 +1,8 @@
 <?php
     class Article
     {
-    
+        private string $nom;
+        private float $prix;
 
         public function __construct( $n, $p ) 
         {

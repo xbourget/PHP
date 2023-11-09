@@ -28,7 +28,7 @@
 
 
 
-    print( $facture2 );
+    
 
 
 
