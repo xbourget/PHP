@@ -13,8 +13,28 @@
     $fusee1 = new Fusee( "spaceX", 'cargo', 2000 );
     $bateau1 = new Bateau( "licorne", 'cargo', 40 );
 
+    protected string $type = '';
+
+    public function __construct( string $nom, $type, $vitesseMax ) 
+    {
+        parent::__construct( $nom, $vitesseMax );
+        $this->type = $type;
+    }                   
+
     $fusee1->demarrer();
+
+    public function demarer()
+    {
+        print( "$this->nom : j'allume la meche, la fusee decolle <br>" );
+    }
+
+
     $bateau1->demarrer();
+    public function demarrer()
+    {
+        print( "$this->nom : je leve l'ancre <br>" );
+    }
+
     
     $fusee1->accelerer();
     $bateau1->accelerer( 5 );

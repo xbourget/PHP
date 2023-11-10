@@ -4,10 +4,10 @@
 
     if( !empty($_POST))
     {
-        $nom = $_POST[ 'nom' ];
+        $nom = $_POST[ 'nom' ]    
 
-        $connexion = mysqli_connect( $hostname, $username, $password, $dbname ); 
-        // id   | nom      | id_espece | age  | poids  | id_pays | id_regime 
+        $connexion = mysqli_connect( $hostname, $username, $password, $dbname );
+            // id   | nom      | id_espece | age  | poids  | id_pays | id_regim   
 
         $sql = "SELECT * FROM animal WHERE nom = '$nom'";
         print( $sql );
