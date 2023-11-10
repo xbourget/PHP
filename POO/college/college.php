@@ -117,5 +117,17 @@
             print( 'Prof   : '.$classe->getEnseignant().'<br>' );
             $this->listerEleves( $nameClasse );
         }
+
+        public function afficherClasses()
+        {
+            foreach( $this->listClasses as $classe )
+            {
+                $name = $classe->getName();
+                $this->afficherClasse( $name );
+
+
+
+            }
+        }
     }
 ?>
