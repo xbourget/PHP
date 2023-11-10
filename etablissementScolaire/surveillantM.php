@@ -4,7 +4,7 @@
     class Surveillant extends Personnel
     {
 
-        publ
+       
 
         public function __toString() 
         {
