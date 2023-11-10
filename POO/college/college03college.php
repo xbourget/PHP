@@ -54,7 +54,9 @@
     print( '<br>=============================<br>'  );
 
     $college1->afficherClasses( '5eme D' );
+    print( '<br>=============================<br>'  );
 
+    $Classes = $classes->getClassesByname ();
     print( '<br>=============================<br>'  );
 
 

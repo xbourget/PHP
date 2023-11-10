@@ -53,13 +53,15 @@
         }
         
         public function getClasseByName( $name )
+        
         {
             foreach ($this->listClasses as $classe ) 
             {
                 if ( $classe->getName() == $name )
-                    return $classe;
+                    return $classes;
             }
             return NULL;
+            print( $this->Classes.'affecté à '.$classe->getName()."<br>"  );
         }
 
         public function addEleve( Eleve $eleve, string $nameClasse  )
