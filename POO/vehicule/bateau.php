@@ -14,7 +14,7 @@
 
         public function __toString() 
         {
-            return '(Bateau '.$this->nom.'  '.$this->famille.')'; 
+            return '(Bateau '.$this->nom.'  '.$this->type.')'; 
         }
 
         public function demarrer()
@@ -25,6 +25,7 @@
         public function arreter()        
         {
             print( "$this->nom : je réduis l'allure et je jette l'ancre<br>" );
+            $this->getVitesseResiduelle();
         }
      }
 ?>

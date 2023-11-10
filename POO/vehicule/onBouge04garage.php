@@ -7,13 +7,18 @@
     include_once "fusee.php";
     include_once "bateau.php";
 
-    $fusee1 = new Fusee( "spaceX", 'cargo', 5000 );
-    $bateau1 = new Bateau( "licorne", 'cargo', 40 );
+    $fusee1 = new Fusee( "Apollo 69", 'cargo', 5000 );
+    $bateau1 = new Bateau( "Speedy Gonzalez", 'cargo', 40 );
 
-    $garage = new Garage( );
+    $garage = new Garage(2);
 
-    $garage->ranger( $fusee1 );
-    $garage->ranger( $bateau1 );
+    $garage->addVehicule( $fusee1 );
+    $garage->addVehicule( $bateau1 );
+
+    $garage->listerVehicules();
+
+    $garage->removeVehicule( $fusee1 );
+    $garage->removeVehicule( $bateau1 );
 
     $garage->listerVehicules();
 ?>

@@ -10,8 +10,8 @@
     include_once "fusee.php";
     include_once "bateau.php";
 
-    $fusee1 = new Fusee( "spaceX", 'cargo', 2000 );
-    $bateau1 = new Bateau( "licorne", 'cargo', 40 );
+    $fusee1 = new Fusee( "Apollo 69", 'cargo', 2000 );
+    $bateau1 = new Bateau( "Speedy Gonzalez", 'cargo', 40 );
 
     $fusee1->demarrer();
     $bateau1->demarrer();

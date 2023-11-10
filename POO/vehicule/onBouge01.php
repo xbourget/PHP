@@ -1,7 +1,7 @@
 <?php
     include_once "bateau.php";
 
-    $bateau1 = new Bateau( "licorne", 'cargo', 40 );
+    $bateau1 = new Bateau( "Speedy Gonzalez", 'cargo', 40 );
     
     $bateau1->demarrer();
     $bateau1->accelerer();

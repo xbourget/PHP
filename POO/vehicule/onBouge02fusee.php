@@ -4,7 +4,7 @@
 
     include_once "fusee.php";
 
-    $fusee1 = new Fusee( "spaceX", 'cargo', 5000 );
+    $fusee1 = new Fusee( "Apollo 69", 'cargo', 5000 );
     
     $fusee1->demarrer();
     $fusee1->accelerer();
