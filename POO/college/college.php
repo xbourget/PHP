@@ -107,7 +107,6 @@
             }
         }
         
-
         public function afficherClasse( string $nameClasse)
         {
             $classe = $this->getClasseByName( $nameClasse );
@@ -116,6 +115,17 @@
             print( 'Classe : '.$classe.'<br>' );
             print( 'Prof   : '.$classe->getEnseignant().'<br>' );
             $this->listerEleves( $nameClasse );
+        }
+
+        public function afficherClasses() //affiche toutes les classes
+        {
+            foreach ($this->listClasses as $classe ) 
+            {
+                $name=$classe->getName();
+                $this->afficherClasse($name);
+            
+            }
+            
         }
     }
 ?>
