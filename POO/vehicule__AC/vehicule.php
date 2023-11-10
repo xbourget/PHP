@@ -26,10 +26,36 @@
             return $this->vitesse;
         }
 
+        /*public function accelerer( int $dv=10 )
+        {
+            if ( ($this->vitesse + $dv) <= $this->vitesseMax && ($this->vitesse + $dv) > 0 )
+            {
+                $this->vitesse += $dv;
+                print( "$this->nom : ma vitesse est de $this->vitesse km/h <br>" );
+            }
+            else
+            {
+                $this->vitesse = $this->vitesseMax;
+                print("$this->nom : Vitesse max dépasse ! ma vitesse reste à $this->vitesse km/h <br>");
+            }
+
+            if ( ($this->vitesse) == $this->vitesseMax) 
+            {
+                print( "$this->nom :  Vitesse max atteinte : $this->vitesse km/h <br>" );
+            }
+        }*/
+
         public function accelerer( int $dv=10 )
         {
             $this->vitesse += $dv;
             print( "$this->nom : ma vitesse est de $this->vitesse km/h <br>" );
+            
+            if ( $this->vitesse > $this->vitesseMax )
+            {
+                $this->vitesse = $this->vitesseMax;
+                print("$this->nom : Vitesse max atteinte ! ma vitesse reste à $this->vitesse km/h <br>");
+            }
+
         }
 
         abstract public function demarrer();
