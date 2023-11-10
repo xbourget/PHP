@@ -25,7 +25,7 @@
         public function arreter()        
         {
             parent::arreter();
-            print( "$this->nom : je réduis l'allure et je jette l'ancre<br>" );
+            print( "$this->nom : je réduis l'allure et je tombe<br>" );
         }
      }
 ?>
