@@ -1,6 +1,6 @@
 <?php
 
-    include_once "vehicule.php";
+    require_once "vehicule.php";
 
     class Fusee extends Vehicule
     {

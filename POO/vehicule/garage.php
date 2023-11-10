@@ -1,6 +1,6 @@
 <?php
 
-    include_once "vehicule.php";
+    require_once "vehicule.php";
 
     class Garage {
 
@@ -11,7 +11,7 @@
 
         public function __construct(int $capacite) {
             $this->capacite = $capacite;
-            $this->dbco = include "dbconfig.php";
+            $this->dbco = require_once "dbconfig.php";
         }   
 
         public function addVehicule(Vehicule $vehicule) {
@@ -41,7 +41,7 @@
         }
 
         public function removeVehicule(Vehicule $vehicule) {
-            
+
             $key = array_search($vehicule, $this->listVehicules);
     
             if ($key !== false) {
