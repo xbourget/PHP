@@ -8,7 +8,7 @@
         private  $listClasses = [];
 
         private string $nom;
-        
+       
 
         public function __construct( string $nom ) 
         {
@@ -19,13 +19,10 @@
         {
             array_push( $this->listIndividus, $individus );
         }
-        
         public function addClasse( Classe $classe  )
         {
-            array_push( $this->listClasses, $classe );
-        }
-        
-       
+            array_push( $this->listClasses, $classe )  
+
         public function listerIndividus()
         {
             foreach ($this->listIndividus as $individus ) 
@@ -33,7 +30,7 @@
                 print( $individus.'<br>' );
             }
         }
-        
+
         public function listerClasses()
         {
             foreach ($this->listClasses as $classe ) 
@@ -51,7 +48,6 @@
             }
             return NULL;
         }
-        
         public function getClasseByName( $name )
         {
             foreach ($this->listClasses as $classe ) 
@@ -87,7 +83,8 @@
             }
 
             $individus->affecterALaClasse( $classe );
-        }
+        }       
+
 
         public function listerEleves( string $nameClasse = '' )
         {
