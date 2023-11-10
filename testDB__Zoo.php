@@ -1,6 +1,6 @@
 <?php
-    require "parametre__AC.php";
-    require "myLib.php";
+    require "parametre.php";
+    require "myLib01.php";
 
     if( !empty($_POST))
     {
@@ -22,7 +22,6 @@
         {
             print_r( $line );
         }
-        //$connexion->close();
         exit();
     }
 ?>

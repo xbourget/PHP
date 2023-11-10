@@ -1,6 +1,7 @@
 <?php
 
     include_once "vehicule.php";
+    include_once "bateau.php";
 
     class Garage
     {
@@ -15,7 +16,8 @@
         {
             print("Les véhicules rangés dans le garage : <br>"); 
             foreach ($this->listVehicules as $vehicule) {
-                print("*** $vehicule<br>");
+                print("*** $vehicule <br>");
+                //return $this->vehicule;
             }
         }
      }
