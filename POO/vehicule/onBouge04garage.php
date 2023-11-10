@@ -9,7 +9,7 @@
 
     $fusee1 = new Fusee( "spaceX", 'cargo', 5000 );
     $bateau1 = new Bateau( "licorne", 'cargo', 40 );
-
+    
     $garage = new Garage( );
 
     $garage->ranger( $fusee1 );

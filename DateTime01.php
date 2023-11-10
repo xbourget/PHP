@@ -16,7 +16,7 @@ print(  $age->format('%Y ans').'<br>' );
 $begin  = new DateTime('2023-01-01');
 $end    = new DateTime('2023-12-31');
 
-$interval = DateInterval::createFromDateString('1 week');
+$interval = DateInterval::createFromDateString('8 day');
 
 $period = new DatePeriod($begin, $interval, $end);
 
