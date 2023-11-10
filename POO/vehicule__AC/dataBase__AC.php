@@ -1,5 +1,4 @@
 <?php
-    require "parametre__AC.php";
     require "myLib.php";
 
     if( !empty($_POST))
