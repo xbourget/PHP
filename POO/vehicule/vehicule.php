@@ -21,7 +21,7 @@
             $this->vitesse = $vitesse;
         }
 
-        public function getVitesse( int $vitesse ) 
+        public function getVitesse( ) 
         {
             return $this->vitesse;
         }
@@ -30,9 +30,28 @@
         {
             $this->vitesse += $dv;
             print( "$this->nom : ma vitesse est de $this->vitesse km/h <br>" );
-        }
 
-        abstract public function demarrer();
-        abstract public function arreter();        
-     }
+            if ( $this->vitesse > $this->vitesseMax )
+                        	
+            {
+                
+                print(" $this->nom  : Oups , ça secout. <br>");
+            }
+
+            if ( $this->vitesse = $this->vitesseMax )
+
+            {  
+
+                print(" $this->nom  : tu as atteint ta vitesse max. <br>");
+            }
+
+        }   
+
+        abstract public function demarrer( );
+        abstract public function arreter( ); 
+        
+        
+
+        
+}
 ?>

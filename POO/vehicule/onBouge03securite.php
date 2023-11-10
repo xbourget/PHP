@@ -15,6 +15,15 @@
 
     $fusee1->demarrer();
     $bateau1->demarrer();
+
+    if ( $vitesse > 1000 )
+			{
+				while(  $vitesse =0; $vitesseMax<=1000; $vitesseMax++)
+				
+            }	
+				{
+					print(' Oups , ça secout '. $vitesseMax. <br>");
+				}
     
     $fusee1->accelerer();
     $bateau1->accelerer( 5 );
@@ -39,4 +48,6 @@
   
     $fusee1->arreter();
     $bateau1->arreter();
+
+
 ?>

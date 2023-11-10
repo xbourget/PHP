@@ -24,29 +24,18 @@
             print( "$this->nom : decollage<br>" );
         }
 
-        public function arreter()        
+        public function arreter() 
         {
-            print( "$this->nom : je réduis l'allure et j'atteris<br>" );
+         
+            if ($this->vitesse > $this->($vitesseMax/10))
+            {
+                print( "$this->nom : ma vitesse résiduelle est de $this->(vitesseMax/10) km/h <br>" );                
+            }
+            {
+                print( "$this->nom : je réduis l'allure et j'atteris<br>" );
+            }
         }
-
-        /**
-         * Get the value of type
-         */ 
-        public function getType()
-        {
-                return $this->type;
-        }
-
-        /**
-         * Set the value of type
-         *
-         * @return  self
-         */ 
-        public function setType($type)
-        {
-                $this->type = $type;
-
-                return $this;
-        }
-     }
+       
+    }
+     
 ?>
