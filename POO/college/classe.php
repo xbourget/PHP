@@ -4,7 +4,7 @@
     class Classe
     {
         protected string $name;       // variable d'instance
-        protected Enseignant $prof;       // variable d'instance
+        protected ?Enseignant $prof = NULL;       // variable d'instance
         
         
         public function __construct( public ? string $n=NULL ) 
@@ -17,12 +17,12 @@
             return 'Classe : '.$this->name; 
         }  
         
-        public function getName( )
+        public function getName( ) 
         {
             return $this->name;
         }
 
-        public function getEnseignant( ) : Enseignant
+        public function getEnseignant( ) : ?Enseignant
         {
             return $this->prof;
         }
