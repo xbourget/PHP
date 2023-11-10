@@ -19,6 +19,11 @@
             return $this->name;
         }
 
+        public function setName( $name )
+        {
+            $this->name = $name;
+        }
+
         abstract public function travailler();
    }
 ?>
