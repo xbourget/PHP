@@ -14,7 +14,7 @@
 
         public function __toString() 
         {
-            return '(Bateau '.$this->nom.'  '.$this->famille.')'; 
+            return '(Bateau '.$this->nom.'  '.$this->type.')'; 
         }
 
         public function demarrer()
