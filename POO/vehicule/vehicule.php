@@ -1,9 +1,9 @@
 <?php
     abstract class Vehicule
     {
-        protected string $nom = '';
-        protected int $vitesseMax = 0;
-        protected int $vitesse = 0;
+        protected string    $nom        = '';
+        protected int       $vitesseMax = 0;
+        protected int       $vitesse    = 0;
 
         public function __construct( string $nom, int $vitesseMax ) 
         {
