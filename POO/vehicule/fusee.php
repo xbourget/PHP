@@ -2,7 +2,7 @@
 
     include_once "vehicule.php";
 
-    class Bateau extends Vehicule
+    class Fusee extends Vehicule
     {
         protected string $type = '';
 
@@ -14,19 +14,24 @@
 
         public function __toString() 
         {
-            return '(Bateau '.$this->nom.'  '.$this->type.')'; 
+            return '(Fusée '.$this->nom.'  '.$this->type.')'; 
         }
 
         public function demarrer()
         {
-            print( "$this->nom : je leve l'ancre<br>" );
+            print( "$this->nom : j'allume la mêche, la fusée décolle'<br>" );
         }
 
         public function arreter()        
         {
-            print( "$this->nom : je réduis l'allure et je jette l'ancre.($this->vitesse km/h)<br>" );
-            if ( $this->vitesse > $this->vitesseMax / 10 )
+            print( "$this->nom : j'éteinds le moteur, je tombe<br>" );
+            $vitesse10PC = $this->vitesseMax /10;
+            if ( $this->vitesse > $vitesse10PC )
+            {
+                print( "$this->nom : ta vitesse est de $this->vitesse<br>" );
                 print( "$this->nom : Oups!!! ça secoue...<br>" );
+            }
+
         }
      }
 ?>
