@@ -2,7 +2,7 @@
 
     // exercice 1 : créer une la nouvelle class nécessaire
 
-    include_once "fusee.php";
+    include_once "Fuse.php";
 
     $fusee1 = new Fusee( "spaceX", 'cargo', 5000 );
     

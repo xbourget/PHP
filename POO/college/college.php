@@ -128,16 +128,6 @@
 
         public function afficherClasses()
         {
-<<<<<<< HEAD
-            foreach( $this->listClasses as $classe )
-            {
-                $name = $classe->getName();
-                $this->afficherClasse( $name );
-
-
-
-            }
-=======
             foreach ($this->listClasses as $classe) 
             {
                 $name = $classe->getName();
@@ -146,7 +136,6 @@
     
             }
 
->>>>>>> origin/xavier
         }
     }
 ?>

@@ -5,6 +5,7 @@
     class Bateau extends Vehicule
     {
         protected string $type = '';
+        
 
         public function __construct( string $nom, $type, $vitesseMax ) 
         {
@@ -14,7 +15,7 @@
 
         public function __toString() 
         {
-            return '(Bateau '.$this->nom.'  '.$this->famille.')'; 
+            return '(Bateau '.$this->nom.'  '.$this->type.')'; 
         }
 
         public function demarrer()
@@ -26,5 +27,15 @@
         {
             print( "$this->nom : je réduis l'allure et je jette l'ancre<br>" );
         }
+
+        public function accelerer(int $dv=10 )        
+        {
+            $this->vitesse += $dv;
+
+            if ($this->vitesse = $this->vitesseMax )
+               print( "$this->nom : tu va trop vide <br>" );
+            print( "$this->nom : ma vitesse est de $this->vitesse km/h <br>" );
+        }
+       
      }
 ?>
