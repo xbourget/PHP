@@ -6,6 +6,8 @@
     include_once "garageM.php";
     include_once "fuseeM.php";
     include_once "bateauM.php";
+    include_once "vehiculeM.php";
+
     
 
     $fusee1 = new Fusee( "spaceX", 'cargo', 5000 );

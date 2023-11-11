@@ -14,12 +14,12 @@
 
         public function __toString() 
         {
-            return '(Bateau '.$this->nom.'  '.$this->type.')'; 
+            return '(Fusée '.$this->nom.'  '.$this->type.')'; 
         }
 
         public function demarrer()
         {
-            print( "$this->nom : je leve l'ancre<br>" );
+            print( "$this->nom : je décolle<br>" );
         }
 
         public function arreter()        

@@ -23,8 +23,12 @@
         }
 
         public function arreter()        
-        {   $vitesseResiduelle = $this->getVitesse($this->vitesse);
-            print( "$this->nom : je réduis l'allure et je jette l'ancre, ma vitesse résiduelle est de $vitesseResiduelle" );
+        {   
+            $vitesseResiduelle = $this->getVitesse($this->vitesse);
+            print( "$this->nom : je réduis l'allure et je jette l'ancre, ma vitesse résiduelle est de $vitesseResiduelle <br> " );
+
+            if ($vitesseResiduelle >= $this->vitesseMax*10/100)
+                print("oups ça secoue<br>");
         }
      }
 ?>

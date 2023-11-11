@@ -42,14 +42,30 @@
         {
             foreach ($this->listVehicule as $vehicule) 
             {
-                $name = $vehicule->getVehiculeByName();
-                $this->listerVehicules( $name );
-                print( '***************<br>');
+                print( $vehicule.'<br>');
     
             }
 
         }
 
+        public function saveVehiclesToDatabase()
+    {
+        // Connexion à la base de données
+        $db = new PDO('mysql:host=localhost;dbname=garage', 'root', '');
+
+        // Préparation de la requête INSERT
+        $sql = 'INSERT INTO rangement (vehicule, date) VALUES (?, ?)';
+        $stmt = $db->prepare($sql);
+
+        // Parcours des véhicules du garage
+        foreach ($this->listVehicule as $vehicule) {
+            // Exécution de la requête INSERT
+            $stmt->execute([$vehicule->getName(), date('Y-m-d')]);
+        }
+
+        // Fermeture de la connexion à la base de données
+        $db = null;
+    }
         
 
 

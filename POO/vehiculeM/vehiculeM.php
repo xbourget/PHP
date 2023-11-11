@@ -21,7 +21,7 @@
             $this->vitesse = $vitesse;
         }
 
-        public function getName( int $nom ) 
+        public function getName() 
         {
             return $this->nom;
         }
@@ -34,10 +34,12 @@
         public function accelerer( int $dv=10 )
         {
             $this->vitesse += $dv;
-            print( "$this->nom : ma vitesse est de $this->vitesse km/h <br>" );
-
             if ($this->vitesse >= $this->vitesseMax)
-                print("Attention, vous avez dépassez la limite de $this->vitesseMax <br>");
+            {
+                $this->vitesse = $this->vitesseMax;
+                print( "$this->nom :stop tu vas trop vite<br>" );
+            }
+            print( "$this->nom : ma vitesse est de $this->vitesse km/h <br>" );
         }
 
         abstract public function demarrer();
