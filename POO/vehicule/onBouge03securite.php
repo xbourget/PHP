@@ -35,7 +35,7 @@
     $bateau1->accelerer(  20 );
 
     $fusee1->accelerer(  1000 );
-    $bateau1->accelerer(  3  );
+    $bateau1->accelerer(  15 );
     
     $fusee1->accelerer( -200);
     $bateau1->accelerer( -10);
