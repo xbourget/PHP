@@ -37,21 +37,12 @@
 
         public function accelerer( int $dv=10 )
         {
-<<<<<<< HEAD
-            $this->vitesse += $dv;
-
-            if( $this->vitesse = $this->vitesseMax )
-            {
-                $this->vitesse = $this->getVitesseMax
-            print( "$this->nom : vous alle trop vite <br>");
-=======
             $this->vitesse += $dv;Oups!!! ça secoue..
 
             if( $this->vitesse > $this->vitesseMax )
             {
                 $this->vitesse = $this->vitesseMax;
                 print( "$this->nom tu vas trop vite<br>");
->>>>>>> origin/xavier
             }
             print( "$this->nom : ma vitesse est de $this->vitesse km/h <br>" );
         }
