@@ -24,15 +24,17 @@
 
         public function arreter()  
         {
-          if ($this->vitesse > $this->($vitesseMax/10))
+          if ($this->vitesse > ($this->vitesseMax/10))
     
             {
-                print( "$this->nom : ma vitesse résiduelle est de $this->(vitesseMax/10) km/h <br>" );
+                print( "$this->nom : ma vitesse résiduelle est de ". ($this->vitesseMax/10)." km/h <br>" );
                         
             }
+            else
             {
                 print( "$this->nom : je réduis l'allure et je jette l'ancre<br>" );
             }
         }    
      }
 ?>
+
