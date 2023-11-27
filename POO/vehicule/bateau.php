@@ -25,7 +25,9 @@
 
         public function arreter()        
         {
-            print( "$this->nom : je réduis l'allure et je jette l'ancre<br>" );
+            print( "$this->nom : je réduis l'allure et je jette l'ancre.($this->vitesse km/h)<br>" );
+            if ( $this->vitesse > $this->vitesseMax / 10 )
+                print( "$this->nom : Oups!!! ça secoue...<br>" );
         }
 
         public function accelerer(int $dv=10 )        
