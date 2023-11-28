@@ -27,7 +27,6 @@ include "carreLib01.php";
     print( "<br>" );
     print( $k1->surface() );
     print( "<br>" );
-
     print( $r1->surface() );
     print( "<br>" );
 
