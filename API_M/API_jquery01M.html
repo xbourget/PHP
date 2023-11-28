@@ -59,6 +59,27 @@
             reussiteGlobal (data, "nom");
         }
 
+        function echec (error) 
+        {
+                    let errorMsg = document.getElementById("error");
+                    if (error) {
+                    errorMsg.innerHTML = "Erreur lors de la récupération des données";
+                    }
+        }
+
+        listeApi.forEach(ville => {
+                $.ajax(
+                {
+                    url: ville ['apiUrl'],
+                    method: 'GET',
+                    dataType: 'json', // Type de données attendu
+                    //async: false, // Option pour une requête synchrone
+                    success : ville['callback'], 
+                    error : echec
+                }
+            );
+            })
+
 
 
 
@@ -100,13 +121,7 @@
 
 
 
-        function echec (error) 
-        {
-                    let errorMsg = document.getElementById("error");
-                    if (error) {
-                    errorMsg.innerHTML = "Erreur lors de la récupération des données";
-                    }
-        }
+       
 
         // $.ajax(
         //         {
@@ -131,18 +146,7 @@
         //         }
         //     );
 
-            listeApi.forEach(ville => {
-                $.ajax(
-                {
-                    url: ville ['apiUrl'],
-                    method: 'GET',
-                    dataType: 'json', // Type de données attendu
-                    //async: false, // Option pour une requête synchrone
-                    success : ville['callback'], 
-                    error : echec
-                }
-            );
-            })
+          
 
     </script>
 </head>
