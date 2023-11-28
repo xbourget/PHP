@@ -5,8 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    
     <script>
+
+
+    document.addEventListener("DOMContentLoaded", async function() {
+    //   const apiKey = "91826217a1d24710a092e573964d7420";
+    const url = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch';
+
+    const container = document.getElementById("container");
+
+    const options = {
+        method: 'GET',
+        url: url,
+        params: {
+        
+        },
+        headers: {
+        'X-RapidAPI-Key': 'e298365a11msha11d9cb39e62c74p177a7fjsn782f8aa74d93',
+        'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = await axios.request(options);
+        console.log(response.data);
+
+
+    } catch (error) {
+        console.error(error);
+    }
+    });
+
+        </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- <script>
 
     document.addEventListener("DOMContentLoaded", function() {
 
@@ -55,7 +98,7 @@
       console.error('Erreur lors de la requête :', error);
     });
 });
-       </script> 
+       </script>  -->
 </head>
 <body>
    
