@@ -24,17 +24,15 @@
         ];
 
         function reussiteGlobal (data, champs) 
-        {
-            // Traitement des données de la réponse
-            // div.innerHTML = JSON.stringify(data);
-
+        {   
+            let name = data["results"][0][champs];
             let results = data['results'];
 
             let divName = document.getElementById("maBelleDiv");
             divName.innerHTML = "";
 
             results.forEach(elem => {
-                divName.innerHTML += elem['champs'] + "<br>";
+                divName.innerHTML += elem[champs] + "<br>";
             });
 
             console.log(data);
@@ -61,10 +59,10 @@
 
         function echec (error) 
         {
-                    let errorMsg = document.getElementById("error");
-                    if (error) {
-                    errorMsg.innerHTML = "Erreur lors de la récupération des données";
-                    }
+                let errorMsg = document.getElementById("error");
+                if (error) {
+                errorMsg.innerHTML = "Erreur lors de la récupération des données";
+                }
         }
 
         listeApi.forEach(ville => {
@@ -81,8 +79,30 @@
             })
 
 
+        </script>
+</head>
+<body>
+
+    <div id="maBelleDiv"></div>
+    <div id="error"></div>
+    <!-- <h2>Rouen: </h2>
+    
+    <br>
+    <h2>Lille: </h2>
+    <div id="maBelleDiv2"></div>
+    <br>
+    <h2>Rennes: </h2>
+    <div id="maBelleDiv3"></div> -->
+    
+
+   
+
+</body>
+</html>
 
 
+
+<!-- 
         // function reussiteRouen (data) 
         // {
         //     // Traitement des données de la réponse
@@ -144,27 +164,8 @@
         //             success : reussiteLille, 
         //             error : echec
         //         }
-        //     );
+        //     ); -->
 
           
 
-    </script>
-</head>
-<body>
-
-    <div id="maBelleDiv"></div>
-    <div id="error"></div>
-    <!-- <h2>Rouen: </h2>
     
-    <br>
-    <h2>Lille: </h2>
-    <div id="maBelleDiv2"></div>
-    <br>
-    <h2>Rennes: </h2>
-    <div id="maBelleDiv3"></div> -->
-    
-
-   
-
-</body>
-</html>
