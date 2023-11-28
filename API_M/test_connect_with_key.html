@@ -31,21 +31,36 @@
     })
       .then(response => response.json())
       .then(data => {
-        console.log('Réponse de l\'API :', data);
-        if (data.results) {
+      console.log('Réponse de l\'API :', data);
+      if (data.results) {
+        
         data.results.forEach(result => {
-        container.innerHTML += `<div>
-                                    <h2>${result.title}</h2>
-                                    <img src="${result.image}" alt="Image">
-                                </div>`;
-          });  
-        } else {
-          console.error('Aucun résultat trouvé dans les données.');
-        }
-      })
-      .catch(error => {
-        console.error('Erreur lors de l\'appel à l\'api: ', error);
-      });
+          
+          const resultDiv = document.createElement('div');
+
+        
+          const titleElement = document.createElement('h2');
+          titleElement.textContent = result.title;
+
+          
+          const imageElement = document.createElement('img');
+          imageElement.src = result.image;
+          imageElement.alt = 'Image';
+
+          
+          resultDiv.appendChild(titleElement);
+          resultDiv.appendChild(imageElement);
+
+          
+          container.appendChild(resultDiv);
+        });
+      } else {
+        console.error('Aucun résultat trouvé dans les données.');
+      }
+    })
+    .catch(error => {
+      console.error('Erreur lors de la requête :', error);
+    });
 });
        </script> 
 </head>
