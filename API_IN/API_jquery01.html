@@ -7,11 +7,28 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
         // URL de l'API à appeler
-        const apiUrl = 'https://data.metropole-rouen-normandie.fr/api/explore/v2.1/catalog/datasets/eco-counter-sites/record?limit=20';
+        const apiUrl = 'https://data.metropole-rouen-normandie.fr/api/explore/v2.1/catalog/datasets/eco-counter-sites/records?limit=10';
 
-        function reussite (data) 
+        var age = 12;
+
+        function reussite ( data ) 
         {
             // Traitement des données de la réponse
+
+            let name = data[ 'results' ][0]['name'];
+            let results = data[ 'results' ];
+
+            let div = document.getElementById( "maBelleDiv" );
+
+            results.forEach( element => {
+                div.innerHTML += element[ 'name' ]+"<br>";
+            });
+
+
+
+            let divName = document.getElementById( "titre" );
+            divName.innerHTML = name;
+
             console.log(data);    
         }
 
@@ -36,5 +53,14 @@
 </head>
 <body>
     
+    <div id="titre"></div>
+    <br> 
+    <div id="maBelleDiv">
+    </div>
+    <br> 
+    <div id="maBelleDivDerror">
+    </div>
+
+
 </body>
 </html>
