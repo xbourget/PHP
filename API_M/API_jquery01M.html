@@ -25,11 +25,10 @@
 
         function reussiteGlobal (data, champs) 
         {   
-            let name = data["results"][0][champs];
+            let name = data["results"][champs];
             let results = data['results'];
 
             let divName = document.getElementById("maBelleDiv");
-            divName.innerHTML = "";
 
             results.forEach(elem => {
                 divName.innerHTML += elem[champs] + "<br>";
@@ -68,11 +67,11 @@
         listeApi.forEach(ville => {
                 $.ajax(
                 {
-                    url: ville ['apiUrl'],
+                    url: ville ['apiURL'],
                     method: 'GET',
                     dataType: 'json', // Type de données attendu
                     //async: false, // Option pour une requête synchrone
-                    success : ville['callback'], 
+                    success : ville['callBack'], 
                     error : echec
                 }
             );
@@ -85,86 +84,12 @@
 
     <div id="maBelleDiv"></div>
     <div id="error"></div>
-    <!-- <h2>Rouen: </h2>
-    
-    <br>
-    <h2>Lille: </h2>
-    <div id="maBelleDiv2"></div>
-    <br>
-    <h2>Rennes: </h2>
-    <div id="maBelleDiv3"></div> -->
-    
 
-   
 
 </body>
 </html>
 
 
-
-<!-- 
-        // function reussiteRouen (data) 
-        // {
-        //     // Traitement des données de la réponse
-        //     // div.innerHTML = JSON.stringify(data);
-
-        //     let results = data['results'];
-
-        //     let divName = document.getElementById("maBelleDiv");
-        //     divName.innerHTML = "";
-
-        //     results.forEach(result => {
-        //         let name = result['name'];
-        //         let commune = result['commune'];
-        //         divName.innerHTML += name + " - " + commune + "<br>";
-        //     });
-
-        //     // console.log(data);
-        // }
-
-
-        // function reussiteLille (data) 
-        // {
-        //     let results = data['results'];
-
-        //     let divName = document.getElementById("maBelleDiv2");
-        //     divName.innerHTML = "";
-
-        //     results.forEach(result => {
-        //         let name = result['name'];
-        //         let capacity = result['capacity'];
-        //         divName.innerHTML += "Nom: " + name + " - " + "Capacité: " + capacity + "<br>";
-        //     });
-
-        //     console.log(data);
-        // }
-
-
-
-       
-
-        // $.ajax(
-        //         {
-        //             url: apiUrlRouen,
-        //             method: 'GET',
-        //             dataType: 'json', // Type de données attendu
-        //             //async: false, // Option pour une requête synchrone
-        //             success : reussiteRouen, 
-        //             error : echec
-        //         }
-        //     );
-
-
-        // $.ajax(
-        //         {
-        //             url: ApiUrlLille,
-        //             method: 'GET',
-        //             dataType: 'json', // Type de données attendu
-        //             //async: false, // Option pour une requête synchrone
-        //             success : reussiteLille, 
-        //             error : echec
-        //         }
-        //     ); -->
 
           
 
