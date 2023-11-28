@@ -15,6 +15,21 @@
         function reussite( response ) 
         {
             // Traitement des données de la réponse
+
+            let results = response.data['results'];
+
+            let divG = document.getElementById("divG");
+            divG.innerHTML = "";
+
+            results.forEach(result => {
+                let name = result['name'];
+                let commune = result['commune'];
+                divG.innerHTML += name + " - " + commune + "<br>";
+            });
+
+            console.log(response);
+
+
             console.log(response.data);
         }
 
@@ -32,5 +47,8 @@
 </head>
 <body>
     
+    <div id="divG"></div>
+
+
 </body>
 </html>

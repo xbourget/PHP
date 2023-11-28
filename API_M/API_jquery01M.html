@@ -16,16 +16,6 @@
         const ApiUrlHavre = "https://data.opendatasoft.com/api/explore/v2.1/catalog/datasets/osm-fr-stations-de-velo-en-libre-service@babel/records?limit=20";
 
 
-        function deleteList() 
-        {
-            let div = document.getElementById("maBelleDiv");
-            let div2 = document.getElementById("maBelleDiv2");
-            div.innerHTML = "";
-            div2.innerHTML = "";
-        }
-
-
-        
         function reussite (data) 
         {
             // Traitement des données de la réponse
@@ -107,8 +97,6 @@
     
 
     <div id="error"></div>
-    <br>
-    <button onclick="deleteList()">Effacer la liste</button>
 
 </body>
 </html>
