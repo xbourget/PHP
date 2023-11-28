@@ -9,94 +9,88 @@
 
 
         // URL de l'API à appeler
-        const apiUrl = 'https://data.metropole-rouen-normandie.fr/api/explore/v2.1/catalog/datasets/eco-counter-sites/records?limit=100';
+        const apiUrlRouen = 'https://data.metropole-rouen-normandie.fr/api/explore/v2.1/catalog/datasets/eco-counter-sites/records?limit=100';
 
-        const ApiUrlLille = "https://api/explore/v2.1/catalog/datasets/ilevia-abrisvelos/records?limit=20";
+        const ApiUrlLille = "https://data.opendatasoft.com/api/explore/v2.1/catalog/datasets/osm-fr-stations-de-velo-en-libre-service@babel/records?limit=20";
 
-        const ApiUrlHavre = "https://data.opendatasoft.com/api/explore/v2.1/catalog/datasets/osm-fr-stations-de-velo-en-libre-service@babel/records?limit=20";
+        const ApiUrlRennes = "https://data.rennesmetropole.fr/api/explore/v2.1/catalog/datasets/etat-des-stations-le-velo-star-en-temps-reel/records?limit=60";
 
 
-        function reussite (data) 
+        var listeApi = 
+        [
+            { 'ville' : 'Rouen', 'callBack': reussiteName, 'champs' : 'name', 'apiURL' : 'https://data.metropole-rouen-normandie.fr/api/explore/v2.1/catalog/datasets/eco-counter-sites/records?limit=100'},
+            { 'ville' : 'Rennes', 'callBack': reussiteNom,'champs' : 'nom', 'apiURL' : 'https://data.rennesmetropole.fr/api/explore/v2.1/catalog/datasets/etat-des-stations-le-velo-star-en-temps-reel/records?limit=60'},
+            { 'ville' : 'Lille', 'callBack': reussiteName,'champs' : 'nom', 'apiURL' : 'https://data.opendatasoft.com/api/explore/v2.1/catalog/datasets/osm-fr-stations-de-velo-en-libre-service@babel/records?limit=60'}
+        ];
+
+        function reussiteGlobal (data, champs) 
+        {   
+            let name = data["results"][champs];
+            let results = data['results'];
+
+            let divName = document.getElementById("maBelleDiv");
+
+            results.forEach(elem => {
+                divName.innerHTML += elem[champs] + "<br>";
+            });
+
+            console.log(data);
+        }
+
+
+
+        function reussiteName (data) 
         {
             // Traitement des données de la réponse
             // div.innerHTML = JSON.stringify(data);
 
-            let results = data['results'];
-
-            let divName = document.getElementById("maBelleDiv");
-            divName.innerHTML = "";
-
-            results.forEach(result => {
-                let name = result['name'];
-                let commune = result['commune'];
-                divName.innerHTML += name + " - " + commune + "<br>";
-            });
-
-            console.log(data);
+            reussiteGlobal (data, "name");
         }
 
 
-        function reussiteHavre (data) 
+        function reussiteNom (data) 
         {
-            let results = data['results'];
+            // Traitement des données de la réponse
+            // div.innerHTML = JSON.stringify(data);
 
-            let divName = document.getElementById("maBelleDiv2");
-            divName.innerHTML = "";
-
-            results.forEach(result => {
-                let name = result['name'];
-                let capacity = result['capacity'];
-                divName.innerHTML += "Nom: " + name + " - " + "Capacité: " + capacity + "<br>";
-            });
-
-            console.log(data);
+            reussiteGlobal (data, "nom");
         }
-
-
 
         function echec (error) 
         {
-                    let errorMsg = document.getElementById("error");
-                    if (error) {
-                    errorMsg.innerHTML = "Erreur lors de la récupération des données";
-                    }
+                let errorMsg = document.getElementById("error");
+                if (error) {
+                errorMsg.innerHTML = "Erreur lors de la récupération des données";
+                }
         }
 
-        $.ajax(
+        listeApi.forEach(ville => {
+                $.ajax(
                 {
-                    url: apiUrl,
+                    url: ville ['apiURL'],
                     method: 'GET',
                     dataType: 'json', // Type de données attendu
                     //async: false, // Option pour une requête synchrone
-                    success : reussite, 
+                    success : ville['callBack'], 
                     error : echec
                 }
             );
+            })
 
 
-        $.ajax(
-                {
-                    url: ApiUrlHavre,
-                    method: 'GET',
-                    dataType: 'json', // Type de données attendu
-                    //async: false, // Option pour une requête synchrone
-                    success : reussiteHavre, 
-                    error : echec
-                }
-            );
-
-    </script>
+        </script>
 </head>
 <body>
 
-    <h2>Rouen: </h2>
     <div id="maBelleDiv"></div>
-    <br>
-    <h2>Le Havre: </h2>
-    <div id="maBelleDiv2"></div>
-    
-
     <div id="error"></div>
+
 
 </body>
 </html>
+
+
+
+          
+
+    
