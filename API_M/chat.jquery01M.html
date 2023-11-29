@@ -1,0 +1,42 @@
+<!-- Créez un fichier HTML pour votre page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenAI Request</title>
+</head>
+<body>
+  <script>
+    const apiKey = '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';
+
+    const apiUrl = 'https://api.openai.com/v1/engines/text-davinci-002/completions';
+
+    const requestData = {
+      prompt: 'Quelle est la signification de la vie?',
+      max_tokens: 10,
+    };
+
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+    };
+
+    // Utilisez la fonction fetch pour effectuer la requête
+    fetch(apiUrl, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(requestData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Traitez la réponse de l'API ici
+      console.log(data.choices[0].text);
+    })
+    .catch(error => {
+      // Gérez les erreurs ici
+      console.error('Erreur lors de la requête à l\'API OpenAI:', error);
+    });
+  </script>
+</body>
+</html>

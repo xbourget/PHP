@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/openai@4.20.1/dist/openaia.min.js"></script>
+
+    <title>OpenAI Chat Response</title>
+</head>
+<body>
+    <div id="response-container">
+        <p id="response-content">La réponse s'affichera ici</p>
+    </div>
+
+    <!-- Inclure la bibliothèque openai directement depuis CDN -->
+    
+
+    <script>
+        // Initialisez OpenAI après que la bibliothèque ait été chargée
+        const openai = new OpenAI({ apiKey: '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' });
+
+        async function main() {
+            const completion = await openai.chat.completions.create({
+                messages: [{ role: "system", content: "Donne moi la recette de la tarte au citron" }],
+                model: "gpt-3.5-turbo",
+            });
+
+            const responseContent = completion.choices[0].message.content;
+
+            // Affiche la réponse dans l'élément avec l'id "response-content"
+            document.getElementById("response-content").innerText = responseContent;
+        }
+
+        // Appelle la fonction main au chargement de la page
+        window.onload = main;
+    </script>
+</body>
+</html>
