@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        
+
+        var listeVille = [
+            { 'ville': 'Rouen', 'callback': reussiteName,   'apiUrl': 'https://data.metropole-rouen-normandie.fr/api/explore/v2.1/catalog/datasets/eco-counter-sites/records?limit=30' },
+            { 'ville': 'Rennes', 'callback': reussiteNom,   'apiUrl': 'https://data.rennesmetropole.fr/api/explore/v2.1/catalog/datasets/etat-des-stations-le-velo-star-en-temps-reel/records?limit=60' },
+            { 'ville': 'Lille', 'callback': reussiteName,   'apiUrl': 'https://data.opendatasoft.com/api/explore/v2.1/catalog/datasets/osm-fr-stations-de-velo-en-libre-service@babel/records?Limit=100' },
+            //{ 'ville': 'Lyon', 'callback': 'reussiteNom', 'apiUrl': 'https://data.grandlyon.com/fr/datapusher/ws/grandlyon/pvo_patrimoine_voirie.pvostationvelov/all.json?maxfeatures=100&start=1' },
+        ]
+
+        function reussiteGlobal(data, champs) {
+
+            listChamps = [ 'nom', 'name', 'noms' ];
+
+
+            let res = listeVille[champs]
+
+            let results = data['results'];
+            let div = document.getElementById("maDiv");
+            results.forEach(listeVille => {
+                div.innerHTML += listeVille[champs] + "<br>";
+
+            });
+
+            console.log(data);
+        }
+
+        function reussiteNom(data) 
+        {
+            reussiteGlobal(data, 'nom')
+        }
+
+        function reussiteName(data) 
+        {
+            reussiteGlobal(data, 'name')
+        }
+
+        function echec(error) {
+            // Gestion des erreurs
+            console.error('Erreur lors de la récupération des données:', error.statusText);
+
+            let divErr = document.getElementById("maDivErreur");
+            divErr.innerHTML = "Connexion impossible";
+
+        }
+
+        listeVille.forEach( ville => {
+            $.ajax(
+                {
+                    url: ville['apiUrl'],
+                    method: 'GET',
+                    dataType: 'json',
+                    success: ville['callback'],
+                    error: echec
+                }
+            );
+        });
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <div id="titre"></div>
+    <div id="maDiv">
+
+    </div>
+    <br>
+    <div id="maDivErreur">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+        const apiKey = "91826217a1d24710a092e573964d7420";
+        const url = 'https://api.spoonacular.com/recipes/complexSearch';
+
+        fetch(url + `?apiKey=${apiKey}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Réponse de l\'API :', data);
+                if (data.results) {
+
+                    data.results.forEach(result => {
+
+                        const resultDiv = document.createElement('div');
+
+
+                        const titleElement = document.createElement('h2');
+                        titleElement.textContent = result.title;
+
+
+                        const imageElement = document.createElement('img');
+                        imageElement.src = result.image;
+                        imageElement.alt = 'Image';
+
+
+                        resultDiv.appendChild(titleElement);
+                        resultDiv.appendChild(imageElement);
+
+                        document.getElementById("container").appendChild(resultDiv);
+                    });
+                } else {
+                    console.error('Aucun résultat trouvé dans les données.');
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors de la requête :', error);
+            });
+    </script>
+</head>
+
+<body>
+    <div id="titre"></div>
+    <br>
+    <div id="container">
+    </div>
+    <br>
+    <div id="maBelleDivDerror">
+    </div>
+</body>
+
+</html>
