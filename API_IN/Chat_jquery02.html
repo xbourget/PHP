@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test OpenAI One</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+ 
+// curl https://api.openai.com/v1/chat/completions   -H "Content-Type: application/json"   -H "Authorization: Bearer $OPENAI_API_KEY"   -d '
+
+
+ 
+ //org-GkwMWH5TRskHSnSVklruXJiu
+ // Replace 'YOUR_API_KEY' with your actual OpenAI API key
+        const apiKey = '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';
+
+        // Define the OpenAI API endpoint
+        const apiUrl = '://api.openai.com/v1/chat/completions';
+
+        // Set up the request headers
+        const headers = {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`
+        };
+
+
+        const prompt = '2 + 3';
+
+        // Set up the request body
+        const requestBodyx = {
+        prompt: prompt,
+        max_tokens: 100  // You can customize this parameter based on your needs
+        };
+
+        const requestBody = {
+            "model": "gpt-3.5-turbo",
+            "messages": [{"role": "user", "content": "Say this is a test!"}],
+            "temperature": 0.7
+        };
+
+        // Make the API call using the fetch function
+        fetch(apiUrl, {
+        method: 'GET',
+        headers: headers,
+        body: JSON.stringify(requestBody)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the API response here
+            let reponse = data['choices'][0]['text']; 
+            console.log(data);
+            $("#maBelleDivDerror").text( reponse );
+        })
+        .catch(error => {
+            // Handle errors here
+            console.error('Error:', error);
+        });
+    </script>
+</head>
+<body>
+    
+    <div id="titre"></div>
+    <br> 
+    <div id="maBelleDiv">
+    </div>
+    <br> 
+    <div id="maBelleDivDerror">
+    </div>
+
+
+</body>
+</html>

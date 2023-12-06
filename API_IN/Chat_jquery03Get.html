@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+            const apiKey = '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';
+            const apiUrl = 'https://api.openai.com/v1/chat/completions';
+
+            const data = {
+            model: 'gpt-3.5-turbo',
+            messages: [{ role: 'user', content: 'donne moi une recette de cuisine pas bonne' }],
+            temperature: 0.7,
+            };
+
+            fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`,
+            },
+            body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(result => {
+                let reponse = result['choices'][0]['message']['content']; 
+                $("#maBelleDiv").text( reponse );
+                console.log('>>>', result);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    </script>
+</head>
+<body>
+    
+    <div id="titre"></div>
+    <br> 
+    <div id="maBelleDiv">
+    </div>
+    <br> 
+    <div id="maBelleDivDerror">
+    </div>
+
+
+</body>
+</html>

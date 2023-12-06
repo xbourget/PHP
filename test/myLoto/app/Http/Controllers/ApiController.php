@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
@@ -21,6 +20,7 @@ class ApiController extends Controller
 
     public function getNumberFree()
     {
+        usleep(rand(10000,1000000));
         $number = rand(1, 100); // Replace this with your logic
         return response()->json(['number' => $number]);
     }
@@ -29,10 +29,12 @@ class ApiController extends Controller
     {
         if ( $key == '1234')
         {
+            usleep(rand(10000,1000000));
             $number = rand(1, 100); // Replace this with your logic
             return response()->json(['number' => $number]);
         }
-        return response()->json(['error' => 'Unauthorized'], 401);    }
+        return response()->json(['error' => 'Unauthorized'], 401);   
+    }
 
     public function getTokenR(Request $request )
     {
@@ -44,6 +46,4 @@ class ApiController extends Controller
         //$token = $user->createToken('AppName')->accessToken;
         return response()->json(['token' => $token]);
     }
-
-
 }
