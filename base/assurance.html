@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+    <head>
+        <meta charset="utf-8">
+         <title>tarif assurance</title>
+    </head>
+    <body onload="display()">
+        <script>
+            var nbrEnfant = 0;
+            var bonus = 0;
+            
+            function display()
+            {
+                document.getElementById( 'nbrEnfant').innerHTML =  'enfant : ' + nbrEnfant.toString();
+
+                color='black'
+
+                if ( bonus > 20 )
+                    color='green';
+                else if ( bonus > 10 )
+                    color='orange';
+                else 
+                    color='red';
+                    
+                document.getElementById( 'display').style.color = color;
+                document.getElementById( 'display').innerHTML =  'tarif : ' + bonus.toString();
+            }
+
+            function plusE( )
+            {
+                nbrEnfant += 1;
+                display();
+            }
+
+            function moinsE( )
+            {
+                nbrEnfant -= 1;
+                if (nbrEnfant < 0)  nbrEnfant = 0;
+                display();
+            }
+
+            function check()
+            {
+                age = parseInt( document.getElementById( 'age' ).value )
+                if ( age > 24 )
+                    bonus += 1
+
+                nbrAccident = parseInt( document.getElementById( 'nbrAccident' ).value )
+                bonus -= nbrAccident;
+
+                client = parseInt( document.getElementById( 'client' ).checked )
+                if ( client )
+                    bonus += 5;
+
+                bonus += nbrEnfant;
+                display();
+            }
+
+            display()
+
+        </script>
+
+        <div id="display">tarif : </div>
+
+        <br>
+        <input id="age" placeholder="age"> 
+        <br>
+        <input id="ancienete" placeholder="ancieneté permis"> 
+        <br>
+        nombre d'accident
+        <select id="nbrAccident">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">Plus</option>
+        </select>
+
+        <br>
+        déjà client : <input type="checkbox" id="client">
+
+        <br>
+        <br>
+        enfant : 
+        <button id="plusE" onclick="plusE()" >+</button>
+        <button id="moinsE" onclick="moinsE()" >-</button>
+        <div id="nbrEnfant"> </div>
+
+        <br>
+        <button id="check" onclick="check()" >vérification</button>
+    </body>
+</html>
+
+
+

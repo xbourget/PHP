@@ -1,0 +1,92 @@
+*
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestGET</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        function testGet( )
+        {
+            $.get("http://localhost:8080/meteo", monCB );
+        }
+
+
+        function getLivre( )
+        {
+            console.log( 'get livre'   );
+            $.get("http://localhost:8080/getLivrex", affLivreCB );
+        }
+
+        function affLivreCB( data, status )
+        {
+            console.log( data  );
+            donnee = JSON.stringify( data );
+            auteur = data.auteur;
+            console.log( donnee + " " + auteur + " " + status  );
+            $("#affficheLivre").text( "le livre " + donnee  + "   " + auteur);
+        }
+
+        function monCB( data, status )
+        {
+            $("#test").text( "le temps: " + data + "  Status: " + status);
+        }
+
+        function succesCB( data )
+        {
+            console.log( "post OK ! " + data );
+            valTitre = $("#titre").val();
+            valAuteur = $("#auteur").val();
+            $("#test").text( "enregistrement OK du livre " + valTitre );
+        }
+        
+        function errorCB( data )
+        {
+            console.log( "post KO ! " + data );
+        }
+        
+        function save( )
+        {
+            valNom = $("#nom").val();
+
+            console.log( valTitre + " " + valAuteur  );
+            jQuery.ajax(
+                {
+                    headers: { 
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json' 
+                    },
+                    'type': 'POST',
+                    'url': "http://localhost:8080/createLivre",
+                    //'url': "http://localhost:8080/addLivre",
+                    //'data': JSON.stringify({ titre : valTitre, auteur : valAuteur, SESSIONID : "28607bceddc16d16738c18ffbbd294744955ef33c64d60e22b78d5fdfb0b7be9" } ),
+                    'data': JSON.stringify({ nom : valTitre, auteur : valAuteur, SESSIONID : "28607bceddc16d16738c18ffbbd294744955ef33c64d60e22b78d5fdfb0b7be9" } ),
+                    'dataType': 'json',
+                    'success': succesCB,
+                    'error': errorCB
+                }
+            );
+        }
+
+
+    </script>
+</head>
+<body>
+    <button onclick="testGet()">METEO</button>
+    <div id="test">________</div>
+    <lr>
+    <input id="titre" placeholder="entrez le titre">
+    <br>
+    <input id="auteur" placeholder="entrez l'auteur">
+    <br>
+    <button onclick="save()">OK</button>
+    <br>
+    <button onclick="getLivre()">GET LIVRE</button>
+    <br>
+    <div id="affficheLivre">________</div>
+</body>
+</html>

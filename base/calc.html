@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+    <head>
+    <title>Ma première page avec du style</title>
+    </head>
+    <body>
+        <script>
+        var toEval = '';
+        
+        function key( i )
+        {
+        toEval += i 
+        document.getElementById( 'display').innerHTML =  toEval
+        }
+
+        function operate( )
+        {
+            let res = eval( toEval );
+            document.getElementById( 'display').innerHTML = toEval + '=' + res 
+        }
+
+        function erase( )
+        {
+            toEval='';
+            document.getElementById( 'display').innerHTML =  toEval 
+        }
+        function delte(){
+            
+            toEval = toEval.substring(0, toEval.length -1)
+            document.getElementById( 'display').innerHTML = toEval
+        }
+
+        </script>
+
+    <div id="display">0.0</div>
+    <br>
+
+    <input id="nom" >
+    <br>
+        <button id="b1" onclick="key('1')" >1</button>
+        <button id="b2" onclick="key('2')" >2</button>
+        <button id="b3" onclick="key('3')" >3</button>
+
+        &nbsp
+        <button id="add" onclick="key('+')" >+</button>
+        
+        <br>
+        <button id="b4" onclick="key('4')" >4</button>
+        <button id="b5" onclick="key('5')" >5</button>
+        <button id="b6" onclick="key('6')" >6</button>
+        &nbsp
+        <button id="sub" onclick="key('-')" >-</button>
+
+        <br>
+        <button id="b7" onclick="key('7')" >7</button>
+        <button id="b8" onclick="key('8')" >8</button>
+        <button id="b9" onclick="key('9')" >9</button>
+        &nbsp
+        <button id="mul" onclick="key('*')" >*</button>
+        <button id="div" onclick="key('/')" >/</button>
+
+        <br>
+        <button id="erase" onclick="erase()" >C</button>
+        <button id="b0" onclick="key('0')" >0</button>
+        <button id="operate" onclick="operate()" >=</button>
+        <button id="point" onclick="key('.')" >.</button>
+        <button id="delete" onclick="delte()" >&#8592;</button>
+
+
+    </body>
+</html>

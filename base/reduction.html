@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>calcul de réduction</title>
+    </head>
+    <body>
+        <script>
+            function calcReduction( montant )
+            {
+                reduc = 8;
+                if (montant < 100.00)  
+                    reduc = 0;
+                else if (montant < 250)
+                    reduc = 2;
+                else if (montant < 500)
+                    reduc = 5;
+
+                document.getElementById( 'display').innerHTML =  "reduction (" + reduc +"%)  total = " + montant * (1-(reduc/100))
+            }
+        </script>
+
+        <div id="display">pas de réduction</div>
+        <br>
+        <input id="montant" type='number' placeholder="montant" onchange="calcReduction( this.value)">
+    </body>
+</html>
